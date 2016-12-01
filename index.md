@@ -1,8 +1,8 @@
 ---
 layout: page
-title: simple site
-tagline: Easy websites with GitHub Pages
-description: Minimal tutorial on making a simple website with GitHub Pages
+title: Tort and Joie
+tagline: Not cool, not cool
+description: A blog by Tort and Joie
 ---
 
 [Github Pages](http://pages.github.com) provide a simple way to make a

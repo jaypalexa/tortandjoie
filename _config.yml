@@ -9,8 +9,8 @@ highlighter: rouge
 # so be sure to set them if your theme uses them.
 #
 title : Tort and Joie
-author : nil
-  name : Tort
+author : 
+  name : nil
   email : nil
   github : nil
   twitter : nil

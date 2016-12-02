@@ -25,3 +25,15 @@ Some pages:
 ---
 
 See more turtle goodness [on TurtleGeek.com](http://www.turtlegeek.com).
+
+---
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+

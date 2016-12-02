@@ -32,8 +32,11 @@ See more turtle goodness [on TurtleGeek.com](http://www.turtlegeek.com).
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
     </li>
   {% endfor %}
 </ul>
 
+---
 
+![Paradise Bay]({{ site.url }}/assets/images/tort-and-joie-paradise-bay.jpg)

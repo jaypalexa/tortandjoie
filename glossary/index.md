@@ -2,6 +2,6 @@
 layout: default
 title: Glossary
 ---
-<div class="cv">
+<div>
   <h1>Glossary</h1>
 </div>

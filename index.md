@@ -6,9 +6,10 @@ description: A blog by Tort and Joie
 ---
 
 Some things we like to do are:
-  - Drive down roads
-  - Think 'bout pancakes
-
+<ul>
+  <li>Drive down roads</li>
+  <li>Think 'bout pancakes</li>
+</ul>
 ---
 
 <article id="one" class="post style1">

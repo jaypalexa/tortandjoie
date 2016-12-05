@@ -17,6 +17,9 @@ author :
   twitter : nil
   feedburner : nil
 
+url: http://www.tortandjoie.com
+# url: https://jaypalexa.github.io
+# baseurl: /tortandjoie
 production_url : https://jaypalexa.github.io/tortandjoie/
 # favicon: /favicon.ico
 # theme: minima

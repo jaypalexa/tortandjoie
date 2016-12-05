@@ -54,6 +54,3 @@ description: A blog by Tort and Joie
     </article>
   </div>
 </section>
----
-[Github repository](https://github.com/jaypalexa/tortandjoie) for this site.<br />
-See more turtle goodness at [TurtleGeek.com](http://www.turtlegeek.com).<br />

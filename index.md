@@ -7,7 +7,7 @@ description: A blog by Tort and Joie
 <section id="one" class="wrapper style1">
   <div class="inner">
     <article class="feature left">
-      <span class="image"><img src="assets/images/tort-and-joie-helping-the-elderly" /></span>
+      <span class="image"><img src="assets/images/tort-and-joie-helping-the-elderly.jpg" /></span>
       <div class="content">
         <h2>Helping the Elderly and Terminally Ill...and Their Pets</h2>
         <p><strong>Tort writes:</strong> Thanks to your fireage finding efforts, another milestone has been reached. We have donated $100.00 to <a href="http://www.cinnamon.org.uk/">The Cinnamon Trust</a> – the National Charity for the elderly, terminally ill and their pets.</p>

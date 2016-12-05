@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tort and Joie
+title: Home
 tagline: Not cool, not cool
 description: A blog by Tort and Joie
 ---

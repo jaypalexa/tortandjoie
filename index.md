@@ -66,7 +66,7 @@ description: A blog by Tort and Joie
       </div>
     </article>
     <article class="feature right">
-      <span class="image"><img src="assets/images/sea_sherpherd.jpg" /></span>
+      <span class="image"><img src="assets/images/sea_shepherd.jpg" /></span>
       <div class="content">
         <h2>Helping To Save The Galapagos</h2>
         <p><strong>Tort writes:</strong> Thanks to your fireage finding efforts (special props to Ryan for her recent UK campaign), another milestone has been reached.</p>

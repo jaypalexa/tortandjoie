@@ -61,7 +61,7 @@ description: A blog by Tort and Joie
         <p>I haven’t had the best run of “my team” winning much of anything lately.</p>
         <p>Not sure why I invest in these sports soap operas.</p>
         <p>Maybe it is time to pursue other interests.  Such as pancakes.  Except Daddy is on a diet.  Grr.</p>
-        <p>Are <i>your grapes</i> sour?</p>
+        <p>Are <i>your</i> grapes sour?</p>
         <p>P. S.  FIRE THE FIREAGE!!!</p>
       </div>
     </article>

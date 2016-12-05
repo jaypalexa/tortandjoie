@@ -1,24 +1,24 @@
 /*
-	Binary by TEMPLATED
+	Retrospect by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
 (function($) {
 
-	skel.breakpoints({
-		xlarge:	'(max-width: 1680px)',
-		large:	'(max-width: 1280px)',
-		medium:	'(max-width: 980px)',
-		small:	'(max-width: 736px)',
-		xsmall:	'(max-width: 480px)'
-	});
+	skel
+		.breakpoints({
+			xlarge: '(max-width: 1680px)',
+			large: '(max-width: 1280px)',
+			medium: '(max-width: 980px)',
+			small: '(max-width: 736px)',
+			xsmall: '(max-width: 480px)'
+		});
 
 	$(function() {
 
 		var	$window = $(window),
-			$body = $('body'),
-			$header = $('#header');
+			$body = $('body');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -32,10 +32,6 @@
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
 
-		// Fix: IE.
-			if (skel.vars.browser == 'ie')
-				$body.addClass('is-ie');
-
 		// Prioritize "important" elements on medium.
 			skel.on('+medium -medium', function() {
 				$.prioritize(
@@ -44,15 +40,9 @@
 				);
 			});
 
-		// Scrolly.
-			$('.scrolly').scrolly({
-				speed: 1000,
-				offset: $header.outerHeight() -1
-			});
-
-		// Menu.
-			$('#menu')
-				.append('<a href="#menu" class="close"></a>')
+		// Nav.
+			$('#nav')
+				.append('<a href="#nav" class="close"></a>')
 				.appendTo($body)
 				.panel({
 					delay: 500,
@@ -62,24 +52,6 @@
 					resetForms: true,
 					side: 'right'
 				});
-
-		// Posts.
-			var $posts = $('.post');
-
-			$posts.each(function() {
-
-				var $this = $(this),
-					$image = $this.find('.image'), $img = $image.find('img'),
-					x;
-
-				// Set image.
-					$image.css('background-image', 'url(' + $img.attr('src') + ')');
-
-				// Set position.
-					if (x = $img.data('position'))
-						$image.css('background-position', x);
-
-			});
 
 	});
 

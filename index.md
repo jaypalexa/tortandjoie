@@ -222,5 +222,27 @@ description: A blog by Tort and Joie
         <p>P. S.  FIRE THE FIREAGE!!!</p>
       </div>
     </article>
+    <article class="feature left">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_tardis_picture.jpg" /></span>
+      <div class="content">
+        <h2>Just What The Doctor Ordered</h2>
+        <p><strong>Tort writes:</strong> We had to take this picture of ourselves in front of a picture of a TARDIS-like police box because Daddy has not yet taken us to see the real police box in Earl’s Court yet.  Grrr.</p>
+        <p>We bought Mommy the sonic screwdriver for Christmas, but she lets us keep it for her.</p>
+        <p>We like The Doctor because he inspires hope and tries to do the right thing.  He makes those around him better people.  Like President Jed Bartlet on the West Wing, we would want to work for him.  For free.</p>
+        <p>Who is your Doctor?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
+    <article class="feature right">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_mckinney_2008_fireage.jpg" /></span>
+      <div class="content">
+        <h2>Sweet Sixteen</h2>
+        <p><strong>Tort writes:</strong> A three-chambered heartfelt “thanks” to the McKinney Bureau for their 2008 fireage efforts – a pouch-stuffing total of $16.11.  This puts the fireage count at well over $100 (see tally).</p>
+        <p>We still do not know where we are going to donate this batch of fireage, but since the pouch is getting heavy, we plan on deciding something soon.</p>
+        <p>We are awaiting reports from our Atlanta Bureau (Hello!  Ryan!) and our Savannah Bureau (Hey, Unkie!  Heard you found a $20 bill in the surf on Jekyll Island?!?).</p>
+        <p>How did you shell-abrate this season?  (KEE!  KEE!  KEE!  I slay me.)</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
   </div>
 </section>

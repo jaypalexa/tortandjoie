@@ -140,5 +140,37 @@ description: A blog by Tort and Joie
         <p>P. S.  FIRE THE FIREAGE!!!</p>
       </div>
     </article>
+    <article class="feature left">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/albatross_in_nz.jpg" /></span>
+      <div class="content">
+        <h2>Helping To Save The Albatross</h2>
+        <p><strong>Tort writes:</strong> Ever since we saw the Northern Royal Albatrosses at Taiaroa Head in New Zealand when visiting there with Mommy and Daddy, we have been fascinated by these birds.</p>
+        <p>Even though they are very big and scare us very much (“our whole bodies, Mommy!”), we love them and their awesomeness.</p>
+        <p>Today we donated $100.00 of our fireage to BirdLife International’s <a href="http://www.rspb.org.uk/supporting/campaigns/albatross/">Save the Albatross</a> campaign.  We hope it helps.</p>
+        <p>What charitable gifts have you given lately?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
+    <article class="feature right">
+      <span class="image">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/step_stile.jpg" title="Step Stile" alt="Step Stile" />
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/step_stile_with_dog_gate.jpg" title="Step Stile With Dog Gate" alt="Step Stile With Dog Gage" />
+      <br />
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/squeeze_stile.jpg" title="Squeeze Stile" alt="Squeeze Stile" />
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/ladder_stile.jpg" title="Ladder Stile" alt="Ladder Stile" />
+      <br />
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/fence_stile.jpg" title="Fence Stile" alt="Fence Stile" />
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/kissing_gate.jpg" title="Kissing Gate" alt="Kissing Gate" />
+      </span>
+      <div class="content">
+        <h2>What's Your Stile?</h2>
+        <p><strong>Tort writes:</strong> We went walking with Mommy and Daddy on the <a href="http://www.nationaltrail.co.uk/Thamespath/">Thames Path</a> last weekend.  We are very good walking buddies.</p>
+        <p>Along the way we saw very many <a href="https://en.wikipedia.org/wiki/Stile">stiles</a>.  One kind even had a sliding board to let dogs through.</p>
+        <p>Mommy and Daddy’s favorite way to pass through a fence is not via a stile, though.  They like <a href="http://en.wikipedia.org/wiki/Kissing_gate">kissing gates</a>.</p>
+        <p>But, it does not matter whether they cross using a stile or a gate.  They kiss when they pass through either one.</p>
+        <p>So, what’s your stile?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
   </div>
 </section>

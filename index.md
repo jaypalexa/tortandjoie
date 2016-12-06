@@ -112,6 +112,7 @@ description: A blog by Tort and Joie
     </article>
     <article class="feature right">
       <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_worlds_best_pancakes.jpg" /></span>
+      <br />
       <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_turtle_pancake_02.jpg" /></span>
       <div class="content">
         <h2>Best Pancakes In The World</h2>

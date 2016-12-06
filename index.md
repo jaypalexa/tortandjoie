@@ -197,5 +197,30 @@ description: A blog by Tort and Joie
         <p>P. S.  FIRE THE FIREAGE!!!</p>
       </div>
     </article>
+    <article class="feature left">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_to_be_little_01.jpg" /></span>
+      <div class="content">
+        <h2>To Belittle Is To Be Little</h2>
+        <p><strong>Tort writes:</strong> We came across a rather confusing fortune cookie at the Chinese restaurant in Brisbane.</p>
+        <p>The fortune said:  <i>To belittle is to be little.</i></p>
+        <p>But, hey, wait – we are already <strong>little</strong>.</p>
+        <p>We demand another cookie.</p>
+        <p>Mmm...cookies....</p>
+        <p>What did your last fortune cookie say?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
+    <article class="feature right">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_in_floppy_hat.jpg" /></span>
+      <div class="content">
+        <h2>Koala Us Happy</h2>
+        <p><strong>Tort writes:</strong> We are going to accompany Mommy and Daddy on their trip to Australia and New Zealand.</p>
+        <p>As you can see, we are on top of the suitcase with our hat on so Mommy and Daddy will not forget us.</p>
+        <p>We hope to see some of our Flatback cousins, but we will probably not because we are not going at the right time.  Crikey.</p>
+        <p>We might see some other cousins, though, because we will go swimming during Mommy and Daddy’s scuba dives.</p>
+        <p>When was the last time you went Down Under?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
   </div>
 </section>

@@ -168,7 +168,7 @@ description: A blog by Tort and Joie
         <p><strong>Tort writes:</strong> We went walking with Mommy and Daddy on the <a href="http://www.nationaltrail.co.uk/Thamespath/">Thames Path</a> last weekend.  We are very good walking buddies.</p>
         <p>Along the way we saw very many <a href="https://en.wikipedia.org/wiki/Stile">stiles</a>.  One kind even had a sliding board to let dogs through.</p>
         <p>Mommy and Daddy’s favorite way to pass through a fence is not via a stile, though.  They like <a href="http://en.wikipedia.org/wiki/Kissing_gate">kissing gates</a>.</p>
-        <p>But, it does not matter whether they cross using a stile or a gate.  They kiss when they pass through either one.</p>
+        <p>But it does not matter whether they cross using a stile or a gate.  They kiss when they pass through either one.</p>
         <p>So, what’s your stile?</p>
         <p>P. S.  FIRE THE FIREAGE!!!</p>
       </div>

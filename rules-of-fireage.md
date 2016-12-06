@@ -29,7 +29,13 @@ title: Rules of Fireage
   <p>Total Fireage must be calculated as US dollars. Foreign currencies must be converted at the exchange rate as of Countin’ Day.</p>
   <p>After the countin’ is done, the Fireage goes back into the pouch.</p>
   <h3>Former Fireage Donations</h3>
-  <p>Tort and Joie have donated previous Fireage gatherings toward the purchase of two commemorative bricks at the Georgia Sea Turtle Center. Unkie Hugh was kind enough to take pictures of the final product:</p>
+  <p>On 19 December 2015, Tort and Joie donated $100.00 of fireage to the <a href="http://www.cinnamon.org.uk/">The Cinnamon Trust</a> - The National Charity for the elderly, terminally ill and their pets.</p>
+  <hr />
+  <p>On 25 June 2011, Tort and Joie donated $100.00 of fireage to the <a href="http://www.seashepherd.org/galapagos/">Sea Shepherd - Defending Galapagos</a> campaign.</p> 
+  <hr />
+  <p>On 12 December 2009, Tort and Joie donated $100.00 of fireage to the <a href="http://www.rspb.org.uk/supporting/campaigns/albatross/">RSPB - Save The Albatross</a> campaign.</p>
+  <hr />
+  <p>In September 2006, Tort and Joie donated previous Fireage gatherings toward the purchase of two commemorative bricks at the Georgia Sea Turtle Center. Unkie Hugh was kind enough to take pictures of the final product:</p>
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_brick_1.jpg" /><br />
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_brick_2.jpg" /><br />
 </div>

@@ -77,7 +77,7 @@ description: A blog by Tort and Joie
       </div>
     </article>
     <article class="feature left">
-      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/fudge_shrine_2.jpg" /></span>
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/fudge_shrine_02.jpg" /></span>
       <div class="content">
         <h2>Fudge Shrine</h2>
         <p><strong>Tort writes:</strong> Fudge – the sweet, three-legged, grumpy-faced cat – died the other day.</p>
@@ -96,6 +96,45 @@ description: A blog by Tort and Joie
         <p>We like to take Mommy and Daddy down to the <a href="http://www.dukesheadrichmond.com/">local pub</a> and warm ourselves by the fireplace.</p>
         <p>We have to watch out for Lexie pub, though!</p>
         <p>What toasts your snout?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
+    <article class="feature left">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_laduree.jpg" /></span>
+      <div class="content">
+        <h2>Ladurée:  French For "Awesome"</h2>
+        <p><strong>Tort writes:</strong> Mommy and Daddy brought us back a pistachio macaroon from the <a href="http://www.laduree.fr/public_en/maisons/burlington_arcade_accueil.htm">Ladurée</a> in Westminster on Saturday.</p>
+        <p>As one of my friends says, “Is this heaven, or did an angel just give birth in my mouth?”</p>
+        <p>Next month we are all going to Paris for somebody’s 11th anniversary.  Maybe we will go to the original Ladurée.  Je pense que oui?</p>
+        <p>What is your favorite place to visit?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
+    <article class="feature right">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_turtle_pancake_02.jpg" /></span>
+      <div class="content">
+        <h2>Best Pancakes In The World</h2>
+        <p><strong>Tort writes:</strong> We helped Daddy make pancakes.  We are very good helpers.  We are also very good snackers.</p>
+        <p>Here is the recipe:</p>
+        <p>Combine the dry ingredients in a bowl, whisk, set aside:</p>
+        <ul>
+        <li>2 cups flour</li>
+        <li>2 tbsp sugar</li>
+        <li>4 tsp baking powder</li>
+        <li>1 tsp baking soda</li>
+        <li>1 tsp fine salt</li>
+        </ul>
+        <p>Combine the wet ingredients in a second bowl, whisk:</p>
+        <ul>
+        <li>2 cups buttermilk</li>
+        <li>4 tbsp melted butter</li>
+        <li>1 tsp vanilla extract</li>
+        <li>2 beaten eggs</li>
+        </ul>
+        <p>Add the wet ingredients to the dry and whisk until just combined.</p>
+        <p>Fry in a pan with butter.</p>
+        <p>Top with maple syrup.</p>
+        <p>What is your favorite snack?</p>
         <p>P. S.  FIRE THE FIREAGE!!!</p>
       </div>
     </article>

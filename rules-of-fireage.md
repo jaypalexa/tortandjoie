@@ -31,7 +31,7 @@ title: Rules of Fireage
   <h3>Former Fireage Donations</h3>
   <p>On 19 December 2015, Tort and Joie donated $100.00 of fireage to the <a href="http://www.cinnamon.org.uk/">The Cinnamon Trust</a> - The National Charity for the elderly, terminally ill and their pets.</p>
   <hr />
-  <p>On 25 June 2011, Tort and Joie donated $100.00 of fireage to the <a href="http://www.seashepherd.org/galapagos/">Sea Shepherd - Defending Galapagos</a> campaign.</p> 
+  <p>On 25 June 2011, Tort and Joie donated $100.00 of fireage to the <a href="http://www.seashepherd.org/galapagos/">Sea Shepherd - Defending Galapagos</a> campaign.</p>
   <hr />
   <p>On 12 December 2009, Tort and Joie donated $100.00 of fireage to the <a href="http://www.rspb.org.uk/supporting/campaigns/albatross/">RSPB - Save The Albatross</a> campaign.</p>
   <hr />

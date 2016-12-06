@@ -173,5 +173,29 @@ description: A blog by Tort and Joie
         <p>P. S.  FIRE THE FIREAGE!!!</p>
       </div>
     </article>
+    <article class="feature left">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_and_darby.jpg" /></span>
+      <div class="content">
+        <h2>Our New Friend: Darby</h2>
+        <p><strong>Tort writes:</strong> Yesterday we rode the train with Daddy up to Derby to see the peregrine falcons nesting on the cathedral.</p>
+        <p>Their four chicks hatched a week or two ago.  See them live <a href="https://derbyperegrines.blogspot.co.uk/p/our-webcams.html">here</a>.</p>
+        <p>Along the way, we adopted a new friend.  Her name is Darby.  (That is how you pronounce Derby, but she is very new and did not know how to spell it quite right.)</p>
+        <p>Her screeches used to frighten P-Nut, but now he is used to them.</p>
+        <p>Who is your newest friend?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
+    <article class="feature right">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/thinkin_bout_pancakes.jpg" /></span>
+      <div class="content">
+        <h2>Thinkin' 'Bout Pancakes</h2>
+        <p><strong>Tort writes:</strong> When we were in New Zealand, we let Mommy and Daddy know that we really liked pancakes.</p>
+        <p>We started singing “Drivin’ down roads, thinkin’ ‘bout pancakes” to the tune of some song in that musical <i>Wicked</i>.  Whatever.  We just like pancakes.</p>
+        <p>In Sydney, Australia, we ate at <i>Pancakes on the Rocks</i>.  They had something called an <i>Aussie Sunrise</i> which had pancakes, bacon, bananas, and pineapples.  Mmm.</p>
+        <p>Daddy made us pancakes last weekend that were the same as the <i>Aussie Sunrise</i> plus blueberries.  We called it the <i>Aussie Blue Sunrise</i>.  Mmm.</p>
+        <p>What’s your favorite snack?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
   </div>
 </section>

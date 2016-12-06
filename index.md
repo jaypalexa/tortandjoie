@@ -111,9 +111,9 @@ description: A blog by Tort and Joie
       </div>
     </article>
     <article class="feature right">
-      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_worlds_best_pancakes.jpg" /></span>
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_worlds_best_pancakes.jpg" />
       <br />
-      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_turtle_pancake_02.jpg" /></span>
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_turtle_pancake_02.jpg" /></span>
       <div class="content">
         <h2>Best Pancakes In The World</h2>
         <p><strong>Tort writes:</strong> We helped Daddy make pancakes.  We are very good helpers.  We are also very good snackers.</p>

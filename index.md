@@ -153,14 +153,15 @@ description: A blog by Tort and Joie
     </article>
     <article class="feature right">
       <span class="image">
-      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/step_stile.jpg" title="Step Stile" alt="Step Stile" />
-      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/step_stile_with_dog_gate.jpg" title="Step Stile With Dog Gate" alt="Step Stile With Dog Gage" />
-      <br />
-      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/squeeze_stile.jpg" title="Squeeze Stile" alt="Squeeze Stile" />
-      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/ladder_stile.jpg" title="Ladder Stile" alt="Ladder Stile" />
-      <br />
-      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/fence_stile.jpg" title="Fence Stile" alt="Fence Stile" />
-      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/kissing_gate.jpg" title="Kissing Gate" alt="Kissing Gate" />
+      <img src="http://www.tortandjoie.com/assets/images/step_stile_with_dog_gate.jpg" title="Step Stile With Dog Gate" alt="Step Stile With Dog Gage">
+      <img src="http://www.tortandjoie.com/assets/images/ladder_stile.jpg" title="Ladder Stile" alt="Ladder Stile">
+      <img src="http://www.tortandjoie.com/assets/images/kissing_gate.jpg" title="Kissing Gate" alt="Kissing Gate">
+      </span>
+      <br>
+      <span class="image">
+      <img src="http://www.tortandjoie.com/assets/images/step_stile.jpg" title="Step Stile" alt="Step Stile">
+      <img src="http://www.tortandjoie.com/assets/images/squeeze_stile.jpg" title="Squeeze Stile" alt="Squeeze Stile">
+      <img src="http://www.tortandjoie.com/assets/images/fence_stile.jpg" title="Fence Stile" alt="Fence Stile">
       </span>
       <div class="content">
         <h2>What's Your Stile?</h2>

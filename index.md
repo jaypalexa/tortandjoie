@@ -289,7 +289,28 @@ description: A blog by Tort and Joie
         <p>When he asked her why she was doing this, she said, “To make people happy.”</p>
         <p>When he told me about it, I was all, like, “WTF?!”  I am not quite sure I get it.</p>
         <p>But then I was a little sad that I had not gotten <strong>my</strong> free hug.</p>
-        <p>Anyway, who have you hugged today?/p>
+        <p>Anyway, who have you hugged today?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
+    <article class="feature left">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/joie_is_the_bad_one.jpg" /></span>
+      <div class="content">
+        <h2>Joie Is The Bad One</h2>
+        <p><strong>Tort writes:</strong> Everybody thinks that I am the bad one.  However any time that water is involved, it is always Joie that gets soaked.</p>
+        <p>They all think that Joie is the sweet one, but, really, she is the bad one.  And I kinda like it.  Naughty torts need love, too.</p>
+        <p>Who is your bad girl/boy?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
+    <article class="feature right">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/lexie_pup_at_dukes_head_pub.jpg" /></span>
+      <div class="content">
+        <h2>Puppies In Pubs</h2>
+        <p><strong>Tort writes:</strong> Pubs are good things.  Dogs in pubs are even better.  Something is just right when I am sipping a pint of Guinness by the fire at the Duke’s Head pub and Lexie comes in.</p>
+        <p>Maybe America could take this lesson from the UK.</p>
+        <p>Just sayin’.</p>
+        <p>Does your pub have a puppy?</p>
         <p>P. S.  FIRE THE FIREAGE!!!</p>
       </div>
     </article>

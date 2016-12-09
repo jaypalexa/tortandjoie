@@ -244,5 +244,28 @@ description: A blog by Tort and Joie
         <p>P. S.  FIRE THE FIREAGE!!!</p>
       </div>
     </article>
+    <article class="feature left">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/tort_and_joie_ta_da.jpg" /></span>
+      <div class="content">
+        <h2>Look! A Dancing Turtle!</h2>
+        <p><strong>Tort writes:</strong> Sometimes when we get hungry, we have to confound the jackies in order to procure some snacks.</p>
+        <p>In those cases, Joie will go over and bust a move, and I will yell “Look!  A dancing turtle!”</p>
+        <p>When the jackies turn their heads, I scoop up the treats and then motion for Joie to get on out of there.</p>
+        <p>Snacks attained by the Dancing Turtle method taste the best.</p>
+        <p>What is your favorite distraction?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
+    <article class="feature right">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/joie_bling.jpg" /></span>
+      <div class="content">
+        <h2>Bling It On</h2>
+        <p><strong>Tort writes:</strong> Um.  Joie has acquired quite a bit of bling lately.</p>
+        <p>She says it makes her feel pretty.  I thought she already was pretty.</p>
+        <p>But I am learning that it is not about me.  It is about her.</p>
+        <p>How many pieces of flair do you have?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
   </div>
 </section>

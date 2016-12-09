@@ -267,5 +267,31 @@ description: A blog by Tort and Joie
         <p>P. S.  FIRE THE FIREAGE!!!</p>
       </div>
     </article>
+    <article class="feature left">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/word_soup_no_words_remaining.jpg" />
+      <br />
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/word_soup_highest_score.jpg" /></span>
+      <div class="content">
+        <h2>Clear Grid To Win 500 Points</h2>
+        <p><strong>Tort writes:</strong> Mommy and Daddy cannot clear the letter grid on the Word Soup game at the pub.   </p>
+        <p>Time and again they get bitch-slapped with <i>“No Words Remaining”</i> — not cool.</p>
+        <p>We appreciate getting the high score recognition, but it still a NASCAR feeling:  winning races but not winning the championship. Or the other way around. We are not sure.</p>
+        <p>Have you ever cleared the grid?</p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+        <p><strong>Update (02 November 2008):  OMG MOMMY AND DADDY CLEARED THE GRID!!!</strong></p>
+      </div>
+    </article>
+    <article class="feature right">
+      <span class="image"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/free_hugs.jpg" /></span>
+      <div class="content">
+        <h2>Making People Happy</h2>
+        <p><strong>Tort writes:</strong> This girl was just standing on the corner, holding this sign, and handing out hugs.  So Daddy went up and got one.</p>
+        <p>When he asked her why she was doing this, she said, “To make people happy.”</p>
+        <p>When he told me about it, I was all, like, “WTF?!”  I am not quite sure I get it.</p>
+        <p>But then I was a little sad that I had not gotten <strong>my</strong> free hug.</p>
+        <p>Anyway, who have you hugged today?/p>
+        <p>P. S.  FIRE THE FIREAGE!!!</p>
+      </div>
+    </article>
   </div>
 </section>

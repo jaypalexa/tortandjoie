@@ -3,7 +3,8 @@ layout: default
 title: Fireage
 ---
 <div>
-<h2>Fireage as of 26 Nov 2017: <strong>$79.48</strong></h2>
+  <h2>Fireage as of 09 Aug 2019: <strong>$111.32</strong></h2>
+  <h2>Fireage as of 26 Nov 2017: <strong>$79.48</strong></h2>
   <h3>What is Fireage?</h3>
   <p>Fireage is cash money found in public places and donated to Tort and Joie’s charity fund. Fireage can only be cash money. Fireage can only be money that is truly found, usually in public places. Fireage cannot be money that you “accidentally” dropped and picked up. C’mon. Tort and Joie know what you’re doing. Acceptable sources of Fireage include money found:</p>
   <ul>

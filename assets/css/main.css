@@ -42,6 +42,10 @@ img.is-256x256 {
 	text-align: left;
 }
 
+.content figure {
+	margin: 0;
+}
+
 @media screen and (max-width: 768px)
 {
 	.media-content {

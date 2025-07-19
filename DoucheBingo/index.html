@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Douche Bingo</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" rev="stylesheet" href="style.css" />
+    <link rel="stylesheet" rev="stylesheet" href="jquery-impromptu-6.2.3.min.css" />
+    <link rel="stylesheet" rev="stylesheet" href="jquery-impromptu-clean-blue-6.2.3.min.css" />
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.13.2.min.js"></script>
+    <script type="text/javascript" src="jquery-impromptu-6.2.3.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/JavaScript">
+        $(document).ready(function () {
+            $().DoucheBingo({});
+        });
+		
+		function playSound(soundFile) {
+			var element = document.getElementById("soundplayer");
+			element.innerHTML = '<embed src="' + soundFile + '" autostart="true" loop="false" hidden="true"></embed>';
+		};
+
+    </script>
+</head>
+<body>
+    <div class="non-printable">
+    <table>
+        <tr>
+            <td class="banner"><img src="images/bill_lumbergh.jpg" alt="" title="Bill Lumbergh" onclick="playSound('sounds/bill_lumbergh.mp3');" /></td>
+            <td class="banner"><img src="images/david_brent.jpg" alt="" title="David Brent" onclick="playSound('sounds/david_brent.mp3');" /></td>
+            <td class="banner"><img src="images/blake.jpg" alt="" title="Blake" onclick="playSound('sounds/blake.mp3');" /></td>
+            <td class="banner"><img src="images/franklin_hart.jpg" alt="" title="Franklin M. Hart Jr." onclick="playSound('sounds/franklin_hart.mp3');" /></td>
+            <td class="banner"><img src="images/pointy_haired_boss.jpg" alt="" title="Pointy-haired Boss" onclick="playSound('sounds/pointy_haired_boss.mp3');" /></td>
+            <td class="banner"><img src="images/gordon_gekko.jpg" alt="" title="Gordon Gekko" onclick="playSound('sounds/gordon_gekko.mp3');" /></td>
+            <td class="banner"><img src="images/louie_de_palma.jpg" alt="" title="Louie De Palma" onclick="playSound('sounds/louie_de_palma.mp3');" /></td>
+            <td class="banner"><img src="images/katharine_parker.jpg" alt="" title="Katharine Parker" onclick="playSound('sounds/katharine_parker.mp3');" /></td>
+            <td class="banner"><img src="images/michael_scott.jpg" alt="" title="Michael Scott" onclick="playSound('sounds/michael_scott.mp3');" /></td>
+            <td class="banner"><img src="images/miranda_priestly.jpg" alt="" title="Miranda Priestly" onclick="playSound('sounds/miranda_priestly.mp3');" /></td>
+            <td class="banner"><img src="images/douglas_reynholm.jpg" alt="" title="Douglas Reynholm" onclick="playSound('sounds/douglas_reynholm.mp3');" /></td>
+            <td class="banner"><img src="images/paula.jpg" alt="" title="Paula" onclick="playSound('sounds/paula.mp3');" /></td>
+            <td class="banner"><img src="images/donald_trump.jpg" alt="" title="Donald Trump" onclick="playSound('sounds/donald_trump.mp3');" /></td>
+            <td class="banner"><img src="images/montgomery_burns.jpg" alt="" title="Montgomery Burns" onclick="playSound('sounds/montgomery_burns.mp3');" /></td>
+            <td class="banner"><img src="images/j_peterman.jpg" alt="" title="J. Peterman" onclick="playSound('sounds/j_peterman.mp3');" /></td>
+            <td class="banner"><img src="images/j_r_ewing.jpg" alt="" title="J. R. Ewing" onclick="playSound('sounds/j_r_ewing.mp3');" /></td>
+            <td class="banner"><img src="images/gordon_ramsay.jpg" alt="" title="Gordon Ramsay" onclick="playSound('sounds/gordon_ramsay.mp3');" /></td>
+        </tr>
+    </table>
+    <h1>Douche Bingo</h1>
+    </div>
+    <div class="printable">
+        <table>
+            <tr>
+                <td id="square_0" class="bingo-square"></td>
+                <td id="square_1" class="bingo-square"></td>
+                <td id="square_2" class="bingo-square"></td>
+                <td id="square_3" class="bingo-square"></td>
+            </tr>
+            <tr>
+                <td id="square_4" class="bingo-square"></td>
+                <td id="square_5" class="bingo-square"></td>
+                <td id="square_6" class="bingo-square"></td>
+                <td id="square_7" class="bingo-square"></td>
+            </tr>
+            <tr>
+                <td id="square_8" class="bingo-square"></td>
+                <td id="square_9" class="bingo-square"></td>
+                <td id="square_10" class="bingo-square"></td>
+                <td id="square_11" class="bingo-square"></td>
+            </tr>
+            <tr>
+                <td id="square_12" class="bingo-square"></td>
+                <td id="square_13" class="bingo-square"></td>
+                <td id="square_14" class="bingo-square"></td>
+                <td id="square_15" class="bingo-square"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="non-printable">
+        <p>
+            <a href="#" id="new_link">Generate</a> a new card &bull; <a href="#" id="clear_link">Clear</a> this card &bull; <a href="javascript:window.print();">Print</a> this card &bull; <a href="word_list.html">Word List</a>
+        </p>
+        <span id="soundplayer"></span>
+    </div>
+</body>
+</html>

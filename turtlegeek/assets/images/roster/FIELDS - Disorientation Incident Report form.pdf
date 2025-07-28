@@ -1,0 +1,927 @@
+%PDF-1.4
+%âãÏÓ
+3 0 obj<</AP<</N 1 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[273.84 743.59 288 756.89]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtPermitHolderInitialChar1)/Q 1/F 4/Subtype/Widget>>
+endobj
+5 0 obj<</AP<</N 4 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[287.56 743.59 301.71 756.89]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtPermitHolderInitialChar2)/Q 1/F 4/Subtype/Widget>>
+endobj
+7 0 obj<</AP<</N 6 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[302.71 743.59 316.87 756.89]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtPermitHolderInitialChar3)/Q 1/F 4/Subtype/Widget>>
+endobj
+9 0 obj<</AP<</N 8 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[331.97 743.93 346.13 757.23]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtYearChar1)/Q 1/F 4/Subtype/Widget>>
+endobj
+11 0 obj<</AP<</N 10 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[345.3 743.93 359.46 757.23]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtYearChar2)/Q 1/F 4/Subtype/Widget>>
+endobj
+13 0 obj<</AP<</N 12 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[367.48 743.93 381.64 757.23]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtMonthChar1)/Q 1/F 4/Subtype/Widget>>
+endobj
+15 0 obj<</AP<</N 14 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[381.69 743.93 395.85 757.23]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtMonthChar2)/Q 1/F 4/Subtype/Widget>>
+endobj
+17 0 obj<</AP<</N 16 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[403.87 743.93 418.03 757.23]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtDayChar1)/Q 1/F 4/Subtype/Widget>>
+endobj
+19 0 obj<</AP<</N 18 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[417.64 743.93 431.8 757.23]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtDayChar2)/Q 1/F 4/Subtype/Widget>>
+endobj
+21 0 obj<</AP<</N 20 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[447.35 743.93 461.5 757.23]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtDisNumByDayChar1)/Q 1/F 4/Subtype/Widget>>
+endobj
+23 0 obj<</AP<</N 22 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[461.11 743.93 475.27 757.23]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtDisNumByDayChar2)/Q 1/F 4/Subtype/Widget>>
+endobj
+25 0 obj<</AP<</N 24 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[497.46 743.93 511.61 757.23]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtCountyCodeChar1)/Q 1/F 4/Subtype/Widget>>
+endobj
+27 0 obj<</AP<</N 26 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[511.67 743.93 525.83 757.23]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtCountyCodeChar2)/Q 1/F 4/Subtype/Widget>>
+endobj
+29 0 obj<</AP<</N 28 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 10 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[526.33 743.93 540.48 757.23]/MaxLen 1/FT/Tx/BS<</W 1/S/S>>/V()/T(txtCountyCodeChar3)/Q 1/F 4/Subtype/Widget>>
+endobj
+31 0 obj<</AP<</N 30 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[126 647.73 225.57 661.02]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtTurtlePermitNumber)/F 4/Subtype/Widget>>
+endobj
+33 0 obj<</AP<</N 32 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[307.51 647.73 554.31 661.02]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtDateOfIncident)/F 4/Subtype/Widget>>
+endobj
+35 0 obj<</AP<</N 34 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[131.85 634.71 554.75 648]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtObserversName)/F 4/Subtype/Widget>>
+endobj
+37 0 obj<</AP<</N 36 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[189.44 622.35 554.31 635.65]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtTelephoneNumber)/F 4/Subtype/Widget>>
+endobj
+39 0 obj<</AP<</N 38 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[397.83 610.35 554.55 623.65]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtLocationOfIncident1)/F 4/Subtype/Widget>>
+endobj
+41 0 obj<</AP<</N 40 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[49.64 596.64 554.61 609.93]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtLocationOfIncident2)/F 4/Subtype/Widget>>
+endobj
+43 0 obj<</AP<</N 42 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[128.91 584.19 554.66 597.48]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtCityAndCounty)/F 4/Subtype/Widget>>
+endobj
+45 0 obj<</AP<</N 44 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[253.76 571.75 554.27 585.04]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtLocalNestID)/F 4/Subtype/Widget>>
+endobj
+47 0 obj<</AP<</N 46 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[273.84 558.72 554.87 572.02]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtDisorientedToward1)/F 4/Subtype/Widget>>
+endobj
+49 0 obj<</AP<</N 48 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[49.64 546.47 554.61 559.76]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtDisorientedToward2)/F 4/Subtype/Widget>>
+endobj
+55 0 obj<</FT/Btn/V/Off/T(radLightingSourceIdentified)/Kids[56 0 R 57 0 R]>>
+endobj
+56 0 obj<</AS/Off/AP<</N<</Off 52 0 R/Yes 50 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[334.03 534.42 343.77 544.16]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 55 0 R/F 4/Subtype/Widget>>
+endobj
+57 0 obj<</AS/Off/AP<</N<</No 53 0 R/Off 54 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[441.3 534.42 451.04 544.16]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 55 0 R/F 4/Subtype/Widget>>
+endobj
+59 0 obj<</AP<</N 58 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[259.27 468 554.46 481.29]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtOtherLightingSource)/F 4/Subtype/Widget>>
+endobj
+61 0 obj<</AP<</N 60 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[365.64 438.73 554.17 452.03]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtDescribeLightingSource1)/F 4/Subtype/Widget>>
+endobj
+63 0 obj<</AP<</N 62 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[49.64 426.29 554.05 439.58]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtDescribeLightingSource2)/F 4/Subtype/Widget>>
+endobj
+65 0 obj<</AP<</N 64 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[49.64 412.96 554.29 426.26]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtDescribeLightingSource3)/F 4/Subtype/Widget>>
+endobj
+70 0 obj<</FT/Btn/V/Off/T(radCagedNest)/Kids[71 0 R 72 0 R]>>
+endobj
+71 0 obj<</AS/Off/AP<</N<</Off 67 0 R/Yes 66 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[198 387.88 207.74 397.61]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 70 0 R/F 4/Subtype/Widget>>
+endobj
+72 0 obj<</AS/Off/AP<</N<</No 68 0 R/Off 69 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[275.06 387.88 284.8 397.61]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 70 0 R/F 4/Subtype/Widget>>
+endobj
+74 0 obj<</AP<</N 73 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[434.97 387.89 555.34 401.18]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtTypeOfCage)/F 4/Subtype/Widget>>
+endobj
+79 0 obj<</FT/Btn/V/Off/T(radTempLightBarrierUsed)/Kids[80 0 R 81 0 R]>>
+endobj
+80 0 obj<</AS/Off/AP<</N<</Off 76 0 R/Yes 75 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[442.35 374.99 452.09 384.73]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 79 0 R/F 4/Subtype/Widget>>
+endobj
+81 0 obj<</AS/Off/AP<</N<</No 77 0 R/Off 78 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[509.95 375.43 519.68 385.17]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 79 0 R/F 4/Subtype/Widget>>
+endobj
+86 0 obj<</FT/Btn/V/Off/T(radRelocatedNest)/Kids[87 0 R 88 0 R]>>
+endobj
+87 0 obj<</AS/Off/AP<</N<</Off 83 0 R/Yes 82 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[442.35 362.66 452.09 372.4]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 86 0 R/F 4/Subtype/Widget>>
+endobj
+88 0 obj<</AS/Off/AP<</N<</No 84 0 R/Off 85 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[509.95 362.66 519.68 372.4]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 86 0 R/F 4/Subtype/Widget>>
+endobj
+93 0 obj<</FT/Btn/V/Off/T(radIncidentPhotographed)/Kids[94 0 R 95 0 R]>>
+endobj
+94 0 obj<</AS/Off/AP<</N<</Off 90 0 R/Yes 89 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[442.35 350.22 452.09 359.96]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 93 0 R/F 4/Subtype/Widget>>
+endobj
+95 0 obj<</AS/Off/AP<</N<</No 91 0 R/Off 92 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[509.95 350.22 519.68 359.96]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 93 0 R/F 4/Subtype/Widget>>
+endobj
+100 0 obj<</FT/Btn/V/Off/T(radNestLocated)/Kids[101 0 R 102 0 R]>>
+endobj
+101 0 obj<</AS/Off/AP<</N<</Off 97 0 R/Yes 96 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[442.35 337.34 452.09 347.07]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 100 0 R/F 4/Subtype/Widget>>
+endobj
+102 0 obj<</AS/Off/AP<</N<</No 98 0 R/Off 99 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[509.95 337.34 519.68 347.07]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 100 0 R/F 4/Subtype/Widget>>
+endobj
+107 0 obj<</Ff 33587200/FT/Btn/V/Off/T(radNestExcavated)/Kids[108 0 R 109 0 R]>>
+endobj
+108 0 obj<</AS/Off/AP<</N<</Off 104 0 R/Yes 103 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[442.35 324.34 452.09 334.07]/MK<</CA(8)>>/BS<</W 1/S/S>>/Parent 107 0 R/F 4/Subtype/Widget>>
+endobj
+109 0 obj<</AS/Off/AP<</N<</No 105 0 R/Off 106 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[509.95 324.34 519.68 334.07]/MK<</CA(8)>>/BS<</W 1/S/S>>/Parent 107 0 R/F 4/Subtype/Widget>>
+endobj
+111 0 obj<</AP<</N 110 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[309.04 276.79 367.89 290.08]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsDisorientedCc)/Q 2/F 4/Subtype/Widget>>
+endobj
+113 0 obj<</AP<</N 112 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[371.44 276.79 421.89 290.08]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsDisorientedCm)/Q 2/F 4/Subtype/Widget>>
+endobj
+115 0 obj<</AP<</N 114 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[426.42 276.79 489.7 290.08]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsDisorientedDc)/Q 2/F 4/Subtype/Widget>>
+endobj
+117 0 obj<</AP<</N 116 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[492.86 276.79 551.71 290.08]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsDisorientedXx)/Q 2/F 4/Subtype/Widget>>
+endobj
+119 0 obj<</AP<</N 118 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[309.04 259.77 367.89 273.07]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsDeadCc)/Q 2/F 4/Subtype/Widget>>
+endobj
+121 0 obj<</AP<</N 120 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[371.44 259.77 421.49 273.07]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsDeadCm)/Q 2/F 4/Subtype/Widget>>
+endobj
+123 0 obj<</AP<</N 122 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[426.42 259.77 489.26 273.07]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsDeadDc)/Q 2/F 4/Subtype/Widget>>
+endobj
+125 0 obj<</AP<</N 124 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[492.86 259.77 551.71 273.07]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsDeadXx)/Q 2/F 4/Subtype/Widget>>
+endobj
+127 0 obj<</AP<</N 126 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[309.04 242.76 367.89 256.05]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsAliveCc)/Q 2/F 4/Subtype/Widget>>
+endobj
+129 0 obj<</AP<</N 128 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[371.44 242.95 421.73 256.24]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsAliveCm)/Q 2/F 4/Subtype/Widget>>
+endobj
+131 0 obj<</AP<</N 130 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[427.06 242.76 489.46 256.05]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsAliveDc)/Q 2/F 4/Subtype/Widget>>
+endobj
+133 0 obj<</AP<</N 132 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[492.86 242.76 551.71 256.05]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsAliveXx)/Q 2/F 4/Subtype/Widget>>
+endobj
+135 0 obj<</AP<</N 134 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[309.04 222.64 367.89 235.93]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsWaterCc)/Q 2/F 4/Subtype/Widget>>
+endobj
+137 0 obj<</AP<</N 136 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[371.44 222.64 421.9 235.93]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsWaterCm)/Q 2/F 4/Subtype/Widget>>
+endobj
+139 0 obj<</AP<</N 138 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[427.06 222.64 489.46 235.93]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsWaterDc)/Q 2/F 4/Subtype/Widget>>
+endobj
+141 0 obj<</AP<</N 140 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[492.86 222.49 551.71 235.78]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtHatchlingsWaterXx)/Q 2/F 4/Subtype/Widget>>
+endobj
+143 0 obj<</AP<</N 142 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[343.09 191.34 554.07 204.63]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtComments1)/F 4/Subtype/Widget>>
+endobj
+145 0 obj<</AP<</N 144 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[50.42 179.06 554.07 192.35]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtComments2)/F 4/Subtype/Widget>>
+endobj
+147 0 obj<</AP<</N 146 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[50.42 166.17 554.07 179.46]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtComments3)/F 4/Subtype/Widget>>
+endobj
+149 0 obj<</AP<</N 148 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[50.42 153.29 554.07 166.58]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtComments4)/F 4/Subtype/Widget>>
+endobj
+151 0 obj<</AP<</N 150 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[50.42 140.85 554.07 154.14]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtComments5)/F 4/Subtype/Widget>>
+endobj
+153 0 obj<</AP<</N 152 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[50.42 127.52 554.07 140.81]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtComments6)/F 4/Subtype/Widget>>
+endobj
+158 0 obj<</FT/Btn/V/Off/T(radLocalAuthProvidedCopy)/Kids[159 0 R 160 0 R]>>
+endobj
+159 0 obj<</AS/Off/AP<</N<</Off 155 0 R/Yes 154 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[310.46 116.26 320.2 126]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 158 0 R/F 4/Subtype/Widget>>
+endobj
+160 0 obj<</AS/Off/AP<</N<</No 156 0 R/Off 157 0 R>>>>/DR<</Font<</ZaDb 51 0 R>>>>/DA(/ZaDb 10 Tf 0 0 0.50196 rg )/Type/Annot/Rect[354.33 116.26 364.07 126]/MK<</CA(8)>>/FT/Btn/BS<</W 1/S/S>>/V/Off/Parent 158 0 R/F 4/Subtype/Widget>>
+endobj
+162 0 obj<</AP<</N 161 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[50.42 90.18 554.07 103.47]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtReportCopiedTo1)/F 4/Subtype/Widget>>
+endobj
+164 0 obj<</AP<</N 163 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[50.42 78.18 554.07 91.47]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtReportCopiedTo2)/F 4/Subtype/Widget>>
+endobj
+166 0 obj<</AP<</N 165 0 R>>/DV()/DR<</Font<</Arial-BoldMT 2 0 R>>>>/DA(/Arial-BoldMT 9 Tf 0 0 0.50196 rg )/Ff 0/Type/Annot/Rect[410.33 51.57 553.72 64.86]/FT/Tx/BS<</W 1/S/S>>/V()/T(txtDate)/F 4/Subtype/Widget>>
+endobj
+51 0 obj<</BaseFont/ZapfDingbats/Type/Font/Subtype/Type1>>
+endobj
+167 0 obj<</Descent -210/FontBBox[-627 -376 2000 1010]/CapHeight 699/Flags 262176/Ascent 728/Type/FontDescriptor/FontName/Arial-BoldMT/ItalicAngle 0/StemV 80>>
+endobj
+2 0 obj<</FirstChar 32/BaseFont/Arial-BoldMT/Type/Font/FontDescriptor 167 0 R/Widths[277 333 474 556 556 889 722 237 333 333 389 583 277 333 277 277 556 556 556 556 556 556 556 556 556 556 333 333 583 583 583 610 975 722 722 722 722 666 610 777 722 277 556 722 610 833 722 777 666 777 722 666 610 722 666 943 666 666 610 333 277 333 583 556 333 556 610 556 610 556 333 610 610 277 277 556 277 889 610 610 610 610 389 556 333 610 556 777 556 556 500 389 279 389 583 0 556 0 277 556 500 1000 556 556 333 1000 666 333 1000 0 610 0 0 277 277 500 500 350 556 1000 333 1000 556 333 943 0 500 666 277 333 556 556 556 556 279 556 333 736 370 556 583 333 736 552 399 548 333 333 333 576 556 277 333 333 365 556 833 833 833 610 722 722 722 722 722 722 1000 722 666 666 666 666 277 277 277 277 722 722 777 777 777 777 777 583 777 722 722 722 722 666 666 610 556 556 556 556 556 556 889 556 556 556 556 556 277 277 277 277 610 610 610 610 610 610 610 548 610 610 610 610 610 556 610 556]/Encoding/WinAnsiEncoding/LastChar 255/Subtype/TrueType>>
+endobj
+104 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+140 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 58.86 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+83 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+48 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 504.97 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+30 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 99.57 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+161 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 503.65 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+64 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 504.65 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+124 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 58.86 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+84 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+105 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+14 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+142 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 210.98 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+85 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+106 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+32 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 246.8 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+163 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 503.65 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+66 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+126 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 58.85 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+144 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 503.65 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+16 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+67 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+34 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 422.9 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+165 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 143.39 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+110 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 58.85 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+89 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+68 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+128 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 50.29 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+146 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 503.65 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+90 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+18 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+69 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+50 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+1 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+36 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 364.87 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+112 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 50.45 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+91 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+52 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+148 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 503.65 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+130 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 62.4 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+92 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+20 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+38 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 156.72 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+4 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+53 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+114 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 63.28 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+73 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 120.37 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+150 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 503.65 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+132 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 58.86 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+54 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+22 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+40 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 504.97 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+6 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+96 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+116 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 58.86 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+75 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+152 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 503.65 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+134 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 58.85 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+97 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+76 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+42 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 425.75 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+24 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+58 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 295.19 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+8 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+154 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+118 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 58.85 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+98 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+77 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+136 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 50.46 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+155 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+99 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+78 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+44 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 300.5 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+26 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+60 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 188.53 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+156 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+120 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 50.05 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+10 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+138 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 62.4 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+157 0 obj <</Resources<</ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 8/Filter/FlateDecode/Subtype/Form>>stream
+xœ    
+endstream
+endobj
+46 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 281.03 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+28 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.16 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+62 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 504.42 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+103 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+82 0 obj <</Resources<</Font<</ZaDb 51 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 9.74 9.74]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 79/Filter/FlateDecode/Subtype/Form>>stream
+xœ+T0Bs=sQ”ª®§` ‚z¦†–f
+Eé
+N!
+úQ‰.I
+†
+!i@ y F= al¢’« a¡’¥à¢¨  ør
+endstream
+endobj
+122 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 62.84 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+12 0 obj <</Resources<</Font<</Arial-BoldMT 2 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]>>/BBox[0 0 14.15 13.29]/FormType 1/Type/XObject/Matrix [1 0 0 1 0 0]/Length 18/Filter/FlateDecode/Subtype/Form>>stream
+xœÓ©PpòuVpb ª
+endstream
+endobj
+168 0 obj <</Length 10/Filter/FlateDecode>>stream
+xœ+ä  î |
+endstream
+endobj
+169 0 obj <</Length 15/Filter/FlateDecode>>stream
+xœSä*ä
+ä R
+endstream
+endobj
+170 0 obj<</Count 1/Type/Pages/Kids[171 0 R]>>
+endobj
+172 0 obj <</Type/Metadata/Length 1497/Subtype/XML>>stream
+<?xpacket begin='' id='W5M0MpCehiHzreSzNTczkc9d' bytes='1497'?>
+
+<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+ xmlns:iX='http://ns.adobe.com/iX/1.0/'>
+
+ <rdf:Description about=''
+  xmlns='http://ns.adobe.com/pdf/1.3/'
+  xmlns:pdf='http://ns.adobe.com/pdf/1.3/'>
+  <pdf:Creator>Microsoft Word </pdf:Creator>
+  <pdf:CreationDate>0-01-01T00:00:00Z</pdf:CreationDate>
+  <pdf:Title>Appendices</pdf:Title>
+  <pdf:Author>Unknown</pdf:Author>
+  <pdf:Producer>Acrobat PDFWriter 3.02 for Windows</pdf:Producer>
+  <pdf:Keywords></pdf:Keywords>
+  <pdf:Subject></pdf:Subject>
+  <pdf:ModDate>2002-05-15T14:23:08-04:00</pdf:ModDate>
+ </rdf:Description>
+
+ <rdf:Description about=''
+  xmlns='http://ns.adobe.com/xap/1.0/'
+  xmlns:xap='http://ns.adobe.com/xap/1.0/'>
+  <xap:CreateDate>0-01-01T00:00:00Z</xap:CreateDate>
+  <xap:Title>
+   <rdf:Alt>
+    <rdf:li xml:lang='x-default'>Appendices</rdf:li>
+   </rdf:Alt>
+  </xap:Title>
+  <xap:Author>Unknown</xap:Author>
+  <xap:Description>
+   <rdf:Alt>
+    <rdf:li xml:lang='x-default'></rdf:li>
+   </rdf:Alt>
+  </xap:Description>
+  <xap:ModifyDate>2002-05-15T14:23:08-04:00</xap:ModifyDate>
+  <xap:MetadataDate>2002-05-15T14:23:08-04:00</xap:MetadataDate>
+ </rdf:Description>
+
+ <rdf:Description about=''
+  xmlns='http://purl.org/dc/elements/1.1/'
+  xmlns:dc='http://purl.org/dc/elements/1.1/'>
+  <dc:title>Appendices</dc:title>
+  <dc:creator>Unknown</dc:creator>
+  <dc:description></dc:description>
+ </rdf:Description>
+
+</rdf:RDF>
+<?xpacket end='r'?>
+endstream
+endobj
+173 0 obj[/CalGray<</Gamma 0.7505/WhitePoint[0.9025 0.9799 1.2281]>>]
+endobj
+174 0 obj[/CalRGB<</Gamma[0.9232 0.6642 0.6642]/Matrix[0.3795 0.1926 0.01311 0.3618 0.711 0.0858 0.2229 0.09641 0.7261]/WhitePoint[0.9025 0.9799 1.2281]>>]
+endobj
+175 0 obj<</Type/Catalog/DefaultGray 173 0 R/Metadata 172 0 R/Pages 170 0 R/AcroForm<</DR<</Font<</Arial-BoldMT 2 0 R/ZaDb 51 0 R>>>>/DA(/Helv 0 Tf 0 g )/Fields[3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R 45 0 R 47 0 R 49 0 R 55 0 R 59 0 R 61 0 R 63 0 R 65 0 R 70 0 R 74 0 R 79 0 R 86 0 R 93 0 R 100 0 R 107 0 R 111 0 R 113 0 R 115 0 R 117 0 R 119 0 R 121 0 R 123 0 R 125 0 R 127 0 R 129 0 R 131 0 R 133 0 R 135 0 R 137 0 R 139 0 R 141 0 R 143 0 R 145 0 R 147 0 R 149 0 R 151 0 R 153 0 R 158 0 R 162 0 R 164 0 R 166 0 R]>>/DefaultRGB 174 0 R>>
+endobj
+171 0 obj<</Resources<</Font<</TT63 176 0 R/TT62 177 0 R/TT61 178 0 R>>/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]/ColorSpace<</CS19 179 0 R/CS18 180 0 R/CS17 179 0 R/CS16 180 0 R/CS15 179 0 R/CS14 180 0 R/CS13 179 0 R/CS12 180 0 R/CS11 179 0 R/CS10 180 0 R/CS9 179 0 R/CS8 180 0 R/CS7 179 0 R/CS6 180 0 R/CS5 179 0 R/CS4 180 0 R/CS3 179 0 R/CS2 180 0 R/CS1 179 0 R/CS0 180 0 R/CS27 179 0 R/CS26 180 0 R/CS25 179 0 R/CS24 180 0 R/CS23 179 0 R/CS22 180 0 R/CS21 179 0 R/CS20 180 0 R>>/ExtGState<</GS13 181 0 R>>>>/CropBox[0 0 612 792]/Type/Page/Contents[168 0 R 182 0 R 183 0 R 184 0 R 185 0 R 186 0 R 187 0 R 188 0 R 189 0 R 169 0 R]/Rotate 0/MediaBox[0 0 612 792]/Annots[3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R 45 0 R 47 0 R 49 0 R 56 0 R 57 0 R 59 0 R 61 0 R 63 0 R 65 0 R 71 0 R 72 0 R 74 0 R 80 0 R 81 0 R 87 0 R 88 0 R 94 0 R 95 0 R 101 0 R 102 0 R 108 0 R 109 0 R 111 0 R 113 0 R 115 0 R 117 0 R 119 0 R 121 0 R 123 0 R 125 0 R 127 0 R 129 0 R 131 0 R 133 0 R 135 0 R 137 0 R 139 0 R 141 0 R 143 0 R 145 0 R 147 0 R 149 0 R 151 0 R 153 0 R 159 0 R 160 0 R 162 0 R 164 0 R 166 0 R]/Parent 170 0 R>>
+endobj
+190 0 obj<</Descent 269/StemH 148/FontBBox[-250 -269 1200 925]/CapHeight 925/Flags 16418/Ascent 925/Type/FontDescriptor/FontName/BookAntiqua,Bold/ItalicAngle 0/MissingWidth 746/XHeight 647/AvgWidth 463/Leading 209/MaxWidth 1000/StemV 148>>
+endobj
+178 0 obj<</BaseFont/TimesNewRoman/Type/Font/Encoding/WinAnsiEncoding/Subtype/TrueType>>
+endobj
+177 0 obj<</FirstChar 31/BaseFont/BookAntiqua,Bold/Type/Font/FontDescriptor 190 0 R/Widths[750 250 278 402 606 500 889 833 227 333 333 444 606 250 333 250 296 500 500 500 500 500 500 500 500 500 500 250 250 606 606 606 444 747 778 667 722 833 611 556 833 833 389 389 778 611 1000 833 833 611 833 722 611 667 778 778 1000 667 667 667 333 606 333 606 500 333 500 611 444 611 500 389 556 611 333 333 611 333 889 611 556 611 611 389 444 333 611 556 833 500 556 500 310 606 310 606 750 500 750 333 500 500 1000 500 500 333 1000 611 389 1000 750 750 750 750 278 278 500 500 606 500 1000 333 998 444 389 833 750 750 667 250 278 500 500 606 500 606 500 333 747 438 500 606 333 747 500 400 549 361 361 333 576 641 250 333 361 488 500 889 890 889 444 778 778 778 778 778 778 1000 722 611 611 611 611 389 389 389 389 833 833 833 833 833 833 833 606 833 778 778 778 778 667 611 611 500 500 500 500 500 500 778 444 500 500 500 500 333 333 333 333 556 611 556 556 556 556 556 549 556 611 611 611 611 556 611 556]/Encoding/WinAnsiEncoding/LastChar 255/Subtype/TrueType>>
+endobj
+179 0 obj/DeviceGray
+endobj
+180 0 obj/DeviceRGB
+endobj
+182 0 obj <</Length 905/Filter/FlateDecode>>stream
+H‰ÌUMoÛ8½ëWĞCÛƒY~“ê-µF‹Äîº*ŠÅvŠÍ¬U(ÖFVøßï”ä]×qƒb®íf8|ïÍãğ.ağ§Œ£44.ù›äWHîşÓÿmşÄE	É›…«Š¶|pãºª›òÖµM¹„¦L¸â`8#Ú‚ÕD‚_ú*7	ÿÅïòäMk†¤rŒ*8ƒ|	#\¦~ù\¥K	N&­’W\s[¶pQW+×@¶)Û²¨¶¯ó¯É4ß£‹§,ŞcQÜ÷ŒÂF¾âß/ğûVp#”‘‚P	LİÿGœëä]Â­=”#¯qÁÈ ĞÏRÀó¦&H@=y!¬?cOş7W4‡T»ƒ"ÕIš"Õ=LÌáÏm•E{ÄV1é— ©øw« `RìñviOâ‘ÌœÆ«éà•Fõx©_¢ºÚâ½ª7íúcŞÓ€,û>`Eá¶¯„ë*ù˜H›’Az-‰}.Švò!Ìà)^ùTãî0×÷›vãzå¾‘?æ>‰V±ÓvRüv
+l»FwlçF¢e{ÿ˜î‰CbR†‰à'J?OÂ4Anˆš†ğº,Ê†¹£YÌä]Úõî¨‰¥>yû¥¦'Uœ£J±R¯…Qdˆ¤½b>r¨”Ú~lH5æ¶ŠH,Ë”—Õó8ÿ<†«³E6›Bşi‘_Náâ,_\f³÷0É>ÎÙt–ŸåÙ|æ¹úBJ¦Í˜_yõ”—Ä¼Ú¾f6gÜ‹é‡ù"‡óùâÊï½J	¦š1¢·¬
+øFxËñq1œ¢`v»úÖÅƒƒb³ƒ»{·mËz³…¿*Wl,ñrË<“¢…ví w!«€óÒU«¸éî5ÒÆf.ñ,JD~Y\×MÑÖÍ¾¼Rš}yO)IÔ”È‹ª*ÖÅvë¦XE1%å|$… {ŠÑOGa{½”M#Gº0â²7f~ß´•ƒî{Ñ!f6CŸšû…Aø¢KûşRmBƒ½›h?g¿û´éOb&Ä¨$Lw•&Eë ¾ÁguY®Ü¦}»?š†n>‚1û+tP_P’êc˜Bğ§GüıåÚ;AK”×Bj	>ñÔ0ŒAoWåx1±kûğ0„º.‡®‡a¬ph¡{_Ï¯·®ypÍË-ÌŠ[wDR|? öi÷x—ÿŠşÔş` É‹P¯
+endstream
+endobj
+183 0 obj <</Length 586/Filter/FlateDecode>>stream
+H‰äV]‹Ó@}ø.²ît¾?|ÓÕÁ!àK_b2µÑl¢IJY½÷N¢[iİ  V-¥LçNîÜ¹çÌ9É®Sò=(ÍŒy•]Àeş>{‘gŸ2á¿ÆYpícöÚìY­òÜ
+‚qù&»âŒsë)1IVY¦ı”íW>TLÙ÷ğ­×	%Vc±\ZJ¦ÓFXÚæ…©`!/q™04Âñ	°RQ"*0Mü¸íÚë‹º-›]¡èceWÅõå“´=Ÿs¤f	˜üÚ¬¦røñq)¤ìÿAˆ„áA`¸e'R- ¤››ëƒ»h^ƒ½êÊb¬»º @uÛ±*ªªÃ@³C·ëËøŞÆ¢ÜB[Ü ‚mµêzh#B9ŒĞàÿõƒ›¢ÿ€ˆª´¡Ñı%óß!Jsw+~{U0ÌH°<0\'Œgö~¦§™àÓu>Ozük„iîº%tOŠ²ÄvCÃÄ<7ÉÛ”Ãæ'¶_×ã-±®»];Şçi£ªmÑæl[öç#¤QÒÓå6^3aÑDÖlv6©ÂjN%HfjPmPj^>H{>“§¤©}1@C*+T°J®™ÔG‚“Ìîl{ù“
+Üû¾!NÉ	¦5È0qyÉŞ)ßdïSæ	K¿”üéä+2 ’Øc¹mêöİ U=t}n‚°Œİ¾è«á6øª õÑÒuó§8«f/_‰äEÉ1è-N‚ôœY¶íXøû,æ‹  …šñ
+endstream
+endobj
+184 0 obj <</Length 826/Filter/FlateDecode>>stream
+H‰äVMkÛ@½òæT’R+ÚOÉé!PšC/-¥‚P0ÙZÇjl­»’ãúßwvµ+[›@/	T¼ñÎŞ{óvÆ“@^Fçpø\ä?£Wºc7F$fò-0‹>ÈîÜä‘Hb‚Ë˜âGÂâbQÑ<úG—y.	'òy4Jâ„ñò†‘D¦6o—ƒ‰˜ºÔ·E¬Ó¥º\ë¦©pËênÑVõ4zcf
+ªRÕm5¯Tyí`bj*3ŸšÛÕ¨ ğ÷›oğÃ>!–Ó CRƒ$™}ûùË0V
+ŞÅR»ØÂˆ!İ¡qÚAş4GPï`»(Zhwk59o& çæî¿­2s•Ê€Õ®ğıRîõÌ`rŞ¯°á¿
+€×KU4
+f•™-ÕäÂH|°«ÜˆrËd_[L"’˜%.sï„uaî­àKİönğy9¥éq2bx6ˆjZ£TÛ‰GO8ÍâÑ»BY²ÄŸéºÔ«ª®6+”¥ª[e*mNÑe2q\íû\a[Ö½çZnjĞ Ùôƒ2CL<V¡N Ây`„ò 5çÅªZî`¡Wj€ì˜Ü¾äò)jê÷óÔBCj"‚êBÈ3£š¶Ø˜¢n/§Å13áõ nõ,µ!2—ƒ-íêTs¿ƒ»¥Ş^nz«Qÿ:’R÷:ÙyœÓ¢vñûb…Û,HÖ‘O]MGD89¬E+,Ö>}Ú§O‡lt»Pæ
+éI3ÛÜzÛı4–Ù«lÆÿ¼ƒ}šŠÌZ†ËÔ¶h:±•æ™Nw0Ò¹#“Ø©¹psÀ5Jl|µnmçÛù"î{¥ëìAşë«Ş/Ö¸_RÚùÅÇLNµ1×}Y$aƒ†’k«¢Şu-¥Á¡¡
+Ğj(:o”¨ñYÃp4 §šœ™Uz©~E	ÿ
+•"Qèê…VˆwÀ‘"ÆÈsÜã—å+üEzï»Vë†$gc[7—û£jf¦š>š‹nÚ¼‡ª-7¥‚z³šâyãæR?’:Ú–ôäìÄ­`ä`õ×¢¿L/id†SrŒ*3gd’¥ø«á)wºQ¹Ÿ{/„ıÿÙ¹Éÿ0 ølG
+endstream
+endobj
+185 0 obj <</Length 865/Filter/FlateDecode>>stream
+H‰ìUßoÓ0~ï_áÇM¢Æ¿b'¼Tƒ…Q6i!¤I(¤n´¦SšRúßã;Ûi¶ubğF*UN|wşî»»Ï£„QE”H(S$a’MÜ—”´v4½.F/‹BsÂ9ìó‘7çŠ
+÷:ásZ|IçÿçoîäEd]ĞD?§HcFY¢3RTÎLáV;âc0NçL›ªÙ¦#»rCfëj»r/vFfÛ¶näæ¤ªÛêÖ’ucoN_«´ña¹†Õ¯Öm›mûÃî{‡TFXígiphêÅ²{`n ¯¶ğñÇÒ}»Ô‡ıÙ¡í–õ†”¤*oc7İ„/ùGd‹…Ó%RªÕ=bÁ†'ôiº‘<Èãœ!yCóË«Ç	‹CD0Hiš9ÏàT¢ŸTPÒ`ŠÍMu”)ÆL8FşMµS€pRH2A!†1@0“½İ¼ »eÙ‘nçª;G'G¸“†| RÇ±ùşjw‹Ä@S†„•Â’õ	+‰Â.çØşiŸË`º_í¨êÛ¨$]İ­Û²İ“[ìÅoeÛÖ¶%Ûk¬›“šZJ>Ö·®I«ÖÚææt;Dè4¥`ÂBŠĞ‰_á‰¶\0\*cb«¸Vê-ï‘?V®? ëUzè'ò2üş0ŸƒÙhííº*»8OÂ‰ø3ØŠ…¡åV‡ö Î’:êÎİrİ­my·´³	ù§9ã1ªæéÓûùQ´¤Ç iœŸJÃ“ØÊ¡‚L œªÏÑEüƒh…9Q÷…S¥j€ğíÏªüáø·í‘Ä+@0Œ…SÆ!ùQ—–ëY•ÍŞ-¶­kãyç†Ñ®l»°MuT¤œ*ˆ¡~Š#¢‹^!ŸÍ
+uŒSqÔY(jÄ3¤^“£ú”N¦Üõ„ôq©Qü{)c4ÍÜùƒÿván—•Èğòç"CÄÌ;ø9Ã^5ÍtÔA&½^ BqR‘ià ~¸º¸È¯ßågç"®±¦†n¥‹ë<¿ÛÌ«ªrÂî‡ü¬x—_¿>{ó>Ø(iiy£O—Óóü²˜¾æçı—¸ºIf°À®p£é3Š{æŸÑ ìi¼ÏŞDCØÀcØş%À ¥×mU
+endstream
+endobj
+176 0 obj<</BaseFont/CourierNew/Type/Font/Encoding/WinAnsiEncoding/Subtype/TrueType>>
+endobj
+186 0 obj <</Length 547/Filter/FlateDecode>>stream
+H‰Œ”ËnÛ0E÷ú
+.›E§$ÅçÒ©•Æ@`ÛHêE7ºéïW$‡’*Îİ9>¾òò0Ã}PŞÃèÄ(=D-” ´àµøıc¸£t`ÂŒcş•å(X²àLKºZ¢u±nŠœÚ 9Õ+°º%­‚`(Z¢{jôÈO] 5Õh»™êÊ­gİÓ¨@njƒäÔ8Â:TËİkÍ¦÷ò}YáfÁİ°ÆÖÜÿ1åíÌtÔ`q9eóò]ŞCQ/VŠ×ÅÑZ+CëqXh¶ü˜†O)9%D'Ò} •V"½Í?•ÁG‘ş4Ì+	A¤÷áÃõˆÛ“x>¥ÏÏ/—ë—Wq¾¼Ş¾^¦kšÎéç0¥µ©ÕÙ¾cšùZDÜû¦³ùF—uı™¤ÏÇm0÷ú·DG6›¨+Ev‚‰Îßúe]§À˜^}:Úîü ^¿>\å`Ôÿ*LÓV/C±Bš¶–ŠEĞÃAs°åNáóUJƒ+?-»1NKütûv=‹ótÚ;ì®cUƒc¦’èoAœ¾dí-Œ“—
+6wëDF]2ˆæÖ #.lÍWjCî‡Ó–¦­T†bu4mı0K )†ƒæ`Ë´¶A£¶!Z´5.§´=½\¾O;o­_ŞKß2Íª¹²ê’Yt·2N^:‰öVÈéKF›¿8•˜¢Áe&£íÖê5
+ø½$låöğ¯  Et7½
+endstream
+endobj
+187 0 obj <</Length 623/Filter/FlateDecode>>stream
+H‰ä–MÚ0†ïùsd¸şŠôF—´ U¬–zÙK‚J—…
+¨Pÿ}=v¾6qØ[?TK6ßñë{L´„J‰PÀ%#(Ñ˜"‚Ã©ˆ¶‘äâL¡r Æ±°o‡˜$jHøÁDïŒQI˜mD	¥<³¶Cij›+°„€§DJ0›h´8xøÓùêa9Ï&›ÂlbîgŸç‹O«;ó£pÊ0ÊØ>&øx
+cMRq–Ùä~fGÃ—‰É–(ÉLÄ´òN)‘‰·êş8§LÇn‰a¦}âdÖ(kcA¾kÕM\Å	SmX•+¨Ô¸¶
+b’­‹’J.[Rå’ß¢U©ƒRuW1¬ICëb‡¤Õ.¹‘^ÖX±şãúÂQ/•¤Œê’ØCÔ¶brÙwsúj{Ø«vqÒÁ½^J‹ÚĞİÍPÁÀjMZ†Uo••=Xî±G8ª`È‘f¤ÆŒ$2DQÙ…ÕÖ;jÑ¾£I·)÷O€ºuay"54à¨‚!G© ! ¾`ı36R¾7hà Ta&›ûGá+[» æà{»Œ­Ûq¢°©Ó˜¨Ä5õÕsqYÅVìo„Z†-\
+/$,Å§+Œí×˜áì¨l6»ËîxÈ÷°>¾¼‡ËGß÷E~. ØçOÇS~) ?là‡}ó”¯Ÿa·…C±.Îçüôóñî½»6Ê9Ü­Ãm	¬ê&€æƒu	î¢ş&bo,!ö_–R¬++`›ÄëËµNel¡½Nÿ°ñÿ‡Øù”ëòÄTàİùv…”ÆËü/]Ô?@~	0 x:#Ã
+endstream
+endobj
+188 0 obj <</Length 395/Filter/FlateDecode>>stream
+H‰ìVMKÄ0½üs\ÁMÒ4m½â¼èÁ€‚”6e+kSÚ¬eÿ½I·»ˆXDdY6‡fàyoò:CÈŞ¯SõL	TN>#sEBŠ˜QBHŒ\.ŠM
+r©ÈL)É€1¤T1d‡Cùõ‰ßs‘ß!;Bq<Ş$Á‘ÆûZÔ¡!;“„ÿöˆ'é¿=âÊQ4¥.ˆP™KcÒGlÎ`¥èyîÓ–&K—®ìÂ4¥]Cİ˜×2×9¤™z¦ »([ÇS›Æ^ <ÌïàÉ-¸¹íw¯¯gr`‹}Ô¹Z¦Œ{‰êŠL®Xëöê¥N[e•—Yj5ÔºiMi•Cæèg™YUnk­s]§}Ñ•è¡{<qš°Ò)´æ¼¿:ğrÏDCşñ"}^Ìßº"8Ã„£}¡,àÈÅÏÍ“0b_ÿµCC¶½'¾gÆÎ·(ÆˆïkI‡†l-Š"oÁX‹ÂÀ7úş•ÔD†ÁfõïÍ!©VHİˆPİ›  {û8
+endstream
+endobj
+189 0 obj <</Length 848/Filter/FlateDecode>>stream
+H‰œU»nÛ0µàA }‚8¶@L‘%[“4)ê!}¤2ÒDIS´ië¼–"ö§©âOğè!°JRâÛ@P€M^{î¹¼|@BsD)Ä°:/ j/«o #’Âê¦c41|j‚HáùôsÙ3f+cDaNx¨”ähÌ°ˆNà¼€=IhfOîW ©ª‚@B¦°º #Œp>ÎauÆ`dÌ{PğSŒ&BÁÇ«ËëÓÛ»y^Ü‡A;Ÿ®Ç|
+TÈÌß}¹©ç÷õş§I²—‚Œód8C*ùƒÓÛšƒ:Ñ*®™yà<ëÃçT„e†£R”;¾=†¯g0ËF]}0!„R-vL(„ÇõıÕM}‹$-“2İc”4)‹=™aÌIY²A–`"f1é‹Á“}óË®*)ò	[…äå_û¯``È?†TeñEÀ¥H©¤(Kašvyœ°˜¿º®û`¿g.SÁ4æ•í¯”m<VĞ³`’H'HŞ°ìA2;‚·ó»$ûï_A’ø‰@üÌÀ@´x;xv¶m»Ã¶íÓÿcæ¼ñÍÌÚ®vmÔ†Yº¨ˆ;{ù1l¹r/ÆtË	\N®²mŒ1—»é²X;æÅ†2r\4ë Â'ıkR2)¡Öl5…©o­À&¥ªİx9`º²)WúWxu½¡-°×3ˆìv”¡2N{vÒr>°ŠÕ´ñQ’4¾>-ß¦TF)7ZûúLs ÿ‡ÒÇJZÍ¤%¥4†ŠÙLZ»˜I«¾ìÄœ2“´ØÅ.JYHí`îº¥êIënß{TSCo×9áÊÎáô®‹ŒÅÓœË®ÛRemJ/tó
+˜´ƒâ4K.ú‘SÇÒ>ˆjdRŠ@S&e¼6­’shnó€3>š°XnİÆ´Ê¡}Àxù-C÷Ğt-ê„8'g9,}V¡s÷»Ş>³Q3®,Kwz7©08W$«qdIa·p³ë¾å·pĞÚ"ÙîŠm\ÀoÕ©wÓGŒ34okŞ¶v¥l»(Öí_ïAš.ÿ¸°vçëÆ#ÿíXyï[¼ëqãœe¸úåÁ¬;K7ÿp8ƒÀ? «v|
+endstream
+endobj
+181 0 obj<</AIS false/TK true/Type/ExtGState/SMask/None/ca 1/CA 1/BG2/Default/op false/SA false/OP false/BM/Normal/HT/Default/OPM 0/UCR2/Default/TR2/Default>>
+endobj
+191 0 obj<</Title(Appendices)/Keywords()/ModDate(D:20020515142308-04'00')/CreationDate(D:00000101000000Z)/Author(Unknown)/Creator(Microsoft Word )/Subject()/Producer(Acrobat PDFWriter 3.02 for Windows)>>
+endobj
+xref
+0 192
+0000000000 65535 f 
+0000026631 00000 n 
+0000017480 00000 n 
+0000000015 00000 n 
+0000029125 00000 n 
+0000000264 00000 n 
+0000031409 00000 n 
+0000000516 00000 n 
+0000034208 00000 n 
+0000000768 00000 n 
+0000037827 00000 n 
+0000001005 00000 n 
+0000040163 00000 n 
+0000001243 00000 n 
+0000021070 00000 n 
+0000001483 00000 n 
+0000023316 00000 n 
+0000001723 00000 n 
+0000025864 00000 n 
+0000001961 00000 n 
+0000028620 00000 n 
+0000002198 00000 n 
+0000030904 00000 n 
+0000002443 00000 n 
+0000033703 00000 n 
+0000002689 00000 n 
+0000036764 00000 n 
+0000002934 00000 n 
+0000038796 00000 n 
+0000003179 00000 n 
+0000019449 00000 n 
+0000003424 00000 n 
+0000021999 00000 n 
+0000003655 00000 n 
+0000023779 00000 n 
+0000003885 00000 n 
+0000026882 00000 n 
+0000004111 00000 n 
+0000028872 00000 n 
+0000004342 00000 n 
+0000031156 00000 n 
+0000004577 00000 n 
+0000033450 00000 n 
+0000004811 00000 n 
+0000036512 00000 n 
+0000005040 00000 n 
+0000038543 00000 n 
+0000005267 00000 n 
+0000019196 00000 n 
+0000005501 00000 n 
+0000026327 00000 n 
+0000017247 00000 n 
+0000027692 00000 n 
+0000029376 00000 n 
+0000030693 00000 n 
+0000005734 00000 n 
+0000005818 00000 n 
+0000006059 00000 n 
+0000033955 00000 n 
+0000006298 00000 n 
+0000037016 00000 n 
+0000006530 00000 n 
+0000039048 00000 n 
+0000006769 00000 n 
+0000019955 00000 n 
+0000007007 00000 n 
+0000022505 00000 n 
+0000023568 00000 n 
+0000024842 00000 n 
+0000026116 00000 n 
+0000007245 00000 n 
+0000007314 00000 n 
+0000007552 00000 n 
+0000029933 00000 n 
+0000007791 00000 n 
+0000032217 00000 n 
+0000033239 00000 n 
+0000035321 00000 n 
+0000036301 00000 n 
+0000008017 00000 n 
+0000008097 00000 n 
+0000008338 00000 n 
+0000039606 00000 n 
+0000018985 00000 n 
+0000020461 00000 n 
+0000021576 00000 n 
+0000008578 00000 n 
+0000008651 00000 n 
+0000008891 00000 n 
+0000024538 00000 n 
+0000025653 00000 n 
+0000027388 00000 n 
+0000028409 00000 n 
+0000009130 00000 n 
+0000009210 00000 n 
+0000009451 00000 n 
+0000031660 00000 n 
+0000033028 00000 n 
+0000035017 00000 n 
+0000036090 00000 n 
+0000009691 00000 n 
+0000009765 00000 n 
+0000010008 00000 n 
+0000039301 00000 n 
+0000018520 00000 n 
+0000020765 00000 n 
+0000021787 00000 n 
+0000010250 00000 n 
+0000010338 00000 n 
+0000010570 00000 n 
+0000024285 00000 n 
+0000010801 00000 n 
+0000027135 00000 n 
+0000011046 00000 n 
+0000029680 00000 n 
+0000011291 00000 n 
+0000031964 00000 n 
+0000011535 00000 n 
+0000034764 00000 n 
+0000011780 00000 n 
+0000037574 00000 n 
+0000012018 00000 n 
+0000039910 00000 n 
+0000012256 00000 n 
+0000020208 00000 n 
+0000012494 00000 n 
+0000022809 00000 n 
+0000012732 00000 n 
+0000025146 00000 n 
+0000012971 00000 n 
+0000028157 00000 n 
+0000013210 00000 n 
+0000030440 00000 n 
+0000013449 00000 n 
+0000032775 00000 n 
+0000013688 00000 n 
+0000035625 00000 n 
+0000013927 00000 n 
+0000038079 00000 n 
+0000014165 00000 n 
+0000018732 00000 n 
+0000014404 00000 n 
+0000021322 00000 n 
+0000014643 00000 n 
+0000023062 00000 n 
+0000014870 00000 n 
+0000025399 00000 n 
+0000015096 00000 n 
+0000027903 00000 n 
+0000015322 00000 n 
+0000030186 00000 n 
+0000015548 00000 n 
+0000032521 00000 n 
+0000015774 00000 n 
+0000034459 00000 n 
+0000035878 00000 n 
+0000037269 00000 n 
+0000038331 00000 n 
+0000016000 00000 n 
+0000016084 00000 n 
+0000016325 00000 n 
+0000019701 00000 n 
+0000016566 00000 n 
+0000022251 00000 n 
+0000016797 00000 n 
+0000024031 00000 n 
+0000017027 00000 n 
+0000017313 00000 n 
+0000040415 00000 n 
+0000040493 00000 n 
+0000040576 00000 n 
+0000043094 00000 n 
+0000040630 00000 n 
+0000042204 00000 n 
+0000042281 00000 n 
+0000042444 00000 n 
+0000049229 00000 n 
+0000044653 00000 n 
+0000044557 00000 n 
+0000045716 00000 n 
+0000045744 00000 n 
+0000052011 00000 n 
+0000045771 00000 n 
+0000046745 00000 n 
+0000047400 00000 n 
+0000048295 00000 n 
+0000049322 00000 n 
+0000049938 00000 n 
+0000050630 00000 n 
+0000051094 00000 n 
+0000044310 00000 n 
+0000052177 00000 n 
+trailer
+<</Size 192/Info 191 0 R/Root 175 0 R>>
+startxref
+52388
+%%EOF

@@ -10,7 +10,7 @@
 	<p>
 		<img src="/assets/images/bumblebee.png" height="32" width="32" />
 	</p>
-	<form name="finder">
+	<form name="mainForm">
 		<p>
 			<span>Center letter:</span>
 			<input type="text" name="centerLetter" maxlength="1" style="height: 35px; width: 35px; font-size: 24px; text-align: center; text-transform: uppercase;" />
@@ -37,25 +37,25 @@
 </body>
 <script>
 	function findValidWords(dictionaryIndex) {
-		var minLength = parseInt(document.finder.minLength.value);
-		var centerLetter = document.finder.centerLetter.value.toLowerCase();
-		var otherLetters = document.finder.otherLetters.value.toLowerCase();
-		var allLetters = centerLetter.concat(otherLetters);
+		const centerLetter = document.mainForm.centerLetter.value.toLowerCase();
+		const otherLetters = document.mainForm.otherLetters.value.toLowerCase();
+		const allLetters = centerLetter.concat(otherLetters);
+		const minLength = parseInt(document.mainForm.minLength.value);
 
-		var validWords = words[dictionaryIndex]
+		const validWords = dictionaries[dictionaryIndex]
 			.filter(word => 
 				word.length >= minLength 
-				&& word.includes(centerLetter)
-				&& word.split('').every(letter => allLetters.includes(letter))
+				&& word.toLowerCase().includes(centerLetter)
+				&& word.toLowerCase().split('').every(letter => allLetters.includes(letter))
 		  ).sort();
 		  
-		var html = '<table>';
-		validWords.forEach(word => html += `<tr><td>${word}</td></tr>`);
-		html += '</table>';
+		let tableHtml = '<table>';
+		validWords.forEach(word => tableHtml += `<tr><td>${word}</td></tr>`);
+		tableHtml += '</table>';
 		document.getElementById('validWordsLabel').innerHTML = " (" + validWords.length + ")";
-		document.getElementById('validWordsTable').innerHTML = html;
+		document.getElementById('validWordsTable').innerHTML = tableHtml;
 	}
-	const words = [
+	const dictionaries = [
 		[
 			'a',
 			'aa',

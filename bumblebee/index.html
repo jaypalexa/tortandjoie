@@ -43,18 +43,23 @@
 		const minLength = parseInt(document.mainForm.minLength.value);
 
 		const validWords = dictionaries[dictionaryIndex]
-			.filter(word => 
-				word.length >= minLength 
-				&& word.toLowerCase().includes(centerLetter)
-				&& word.toLowerCase().split('').every(letter => allLetters.includes(letter))
-		  ).sort();
-		  
+			.map(word => word.toLowerCase())
+			.filter(word => word.length >= minLength 
+				&& word.includes(centerLetter)
+				&& word.split('').every(letter => allLetters.includes(letter)))
+			.sort();
+
 		let tableHtml = '<table>';
-		validWords.forEach(word => tableHtml += `<tr><td>${word}</td></tr>`);
+		validWords.forEach(word => {
+			const isPangram = allLetters.split('').every(letter => word.includes(letter));
+			tableHtml += `<tr><td>${isPangram ? `<b>${word}</b>` : word}</td></tr>`;
+		});
 		tableHtml += '</table>';
+
 		document.getElementById('validWordsLabel').innerHTML = " (" + validWords.length + ")";
 		document.getElementById('validWordsTable').innerHTML = tableHtml;
 	}
+
 	const dictionaries = [
 		[
 			'a',

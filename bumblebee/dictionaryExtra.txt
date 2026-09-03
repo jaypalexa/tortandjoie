@@ -6,4 +6,7 @@ droid
 hoar
 nonart
 nonrandom
+nunchuck
+nunchuk
 ratatat
+tommyrot

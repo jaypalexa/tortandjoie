@@ -10,4 +10,5 @@ nonrandom
 nunchuck
 nunchuk
 ratatat
+tallit
 tommyrot

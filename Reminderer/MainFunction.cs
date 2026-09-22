@@ -41,8 +41,11 @@ namespace Reminderer
                 "UK ETIAS (Tracy)","12/31/2099","120"
                 "Canada eTA (JP)","5/15/2031","90"
                 "Canada eTA (Tracy)","5/15/2031","90"
+                "GHIC (JP)","8/9/2031","270"
+                "GHIC (Tracy)","8/9/2031","270"
                 "Two Together Railcard","7/20/2027","30"
                 "Senior Railcard","4/25/2027","30"
+                "AARP","11/1/2027","30"
             """;
             // "Kitten Railcard","10/14/2026","30"
 

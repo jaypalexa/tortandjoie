@@ -47,21 +47,22 @@ namespace Reminderer
                 "Senior Railcard","4/25/2027","30"
                 "AARP","11/1/2027","30"
             """;
-            // "Kitten Railcard","10/14/2026","30"
+            // "Kitten Railcard","10/22/2026","30"
 
-            var allExpiringItems = allExpiringItemsAsCsv.Split([Environment.NewLine], StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+            var allExpiringItems = allExpiringItemsAsCsv.Replace("\"", string.Empty).Split(Environment.NewLine, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
                 .Select(x => {
-                    var expirationDate = DateTime.ParseExact(x.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)[1].Trim('"'), "M/d/yyyy", CultureInfo.InvariantCulture);
-                    var daysInAdvance = int.Parse(x.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)[2].Trim('"'));
+                    var parts = x.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
+                    var name = parts[0];
+                    var expirationDate = DateTime.ParseExact(parts[1], "M/d/yyyy", CultureInfo.InvariantCulture);
+                    var daysInAdvance = int.Parse(parts[2]);
                     return new
                     {
-                        Name = x.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)[0].Trim('"'),
+                        Name = name,
                         ExpirationDate = expirationDate,
                         DaysInAdvance = daysInAdvance,
                         ReminderDate = expirationDate.AddDays(-1 * daysInAdvance)
                     };
-                })
-                .ToList();
+                });
 
             var currentExpiringItems = allExpiringItems.Where(x => (x.ExpirationDate.Date - now.Date).Days == x.DaysInAdvance);
 

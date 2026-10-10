@@ -13,6 +13,7 @@ nonrandom
 nunchuck
 nunchuk
 outro
+pandan
 pipet
 ratatat
 runout

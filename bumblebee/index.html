@@ -1,605 +1,768 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f5ef">
-  <title>Spelling Bee Letter Helper | Tort &amp; Joie</title>
-  <meta name="description" content="Upload a photo of your Spelling Bee puzzle to identify its seven letters.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>Tort and Joie - Bumblebee</title>
+    <meta
+      name="description"
+      content="Upload a photo of your Spelling Bee puzzle to identify its seven letters."
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/images/bumblebee.png"
+    />
 
-  <style>
-    :root {
-      --background: #f7f5ef;
-      --card: #ffffff;
-      --text: #25251f;
-      --muted: #66665f;
-      --border: #deded5;
-      --gold: #f4c84a;
-      --gray-hex: #e7e7e2;
-      --green: #276749;
-      --red: #a12b2b;
-    }
+    <style>
+      :root {
+        --background: lightyellow;
+        --card: #ffffff;
+        --text: #25251f;
+        --muted: #66665f;
+        --border: #deded5;
+        --gold: #f4c84a;
+        --gray-hex: #e7e7e2;
+        --green: #276749;
+        --red: #a12b2b;
+      }
 
-    * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
 
-    body {
-      margin: 0;
-      padding: 24px 14px 40px;
-      background: var(--background);
-      color: var(--text);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-      line-height: 1.5;
-    }
+      body {
+        margin: 0;
+        padding: 24px 14px 40px;
+        background: var(--background);
+        color: var(--text);
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.5;
+      }
 
-    main {
-      width: 100%;
-      max-width: 650px;
-      margin: 0 auto;
-    }
+      main {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+      }
 
-    .brand {
-      margin: 0 0 8px;
-      color: var(--muted);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
+      .brand {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
 
-    h1 {
-      margin: 0 0 10px;
-      font-size: clamp(1.8rem, 6vw, 2.5rem);
-      line-height: 1.15;
-    }
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+        line-height: 1.15;
+      }
 
-    .intro {
-      margin: 0 0 24px;
-      color: var(--muted);
-    }
+      .intro {
+        margin: 0 0 24px;
+        color: var(--muted);
+      }
 
-    .panel {
-      padding: clamp(18px, 5vw, 28px);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: var(--card);
-      box-shadow: 0 8px 28px rgb(25 25 15 / 5%);
-    }
+      .panel {
+        padding: clamp(18px, 5vw, 28px);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--card);
+        box-shadow: 0 8px 28px rgb(25 25 15 / 5%);
+      }
 
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 700;
-    }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
 
-    input[type="file"],
-    input[type="text"] {
-      display: block;
-      width: 100%;
-      min-height: 46px;
-      padding: 10px 12px;
-      border: 1px solid #c9cabe;
-      border-radius: 10px;
-      background: #fff;
-      color: var(--text);
-      font: inherit;
-    }
+      input[type="file"],
+      input[type="text"],
+      input[type="number"] {
+        display: block;
+        width: 100%;
+        min-height: 46px;
+        padding: 10px 12px;
+        border: 1px solid #c9cabe;
+        border-radius: 10px;
+        background: #fff;
+        color: var(--text);
+        font: inherit;
+      }
 
-    input[type="file"] { padding: 8px; }
+      input[type="file"] {
+        padding: 8px;
+      }
 
-    .hint, .smallprint {
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
+      .hint,
+      .smallprint {
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
 
-    .hint { margin: 8px 0 16px; }
+      .hint {
+        margin: 8px 0 16px;
+      }
 
-    /* Uploaded image preview */
-    .preview-box {
-      display: none;
-      margin: 16px 0 20px;
-      padding: 12px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: #fafaf7;
-    }
+      /* Uploaded image preview */
+      .preview-box {
+        display: none;
+        margin: 16px 0 20px;
+        padding: 12px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #fafaf7;
+      }
 
-    .preview-box.visible { display: block; }
+      .preview-box.visible {
+        display: block;
+      }
 
-    .preview-heading {
-      margin: 0 0 10px;
-      font-size: 0.92rem;
-      font-weight: 700;
-    }
+      .preview-heading {
+        margin: 0 0 10px;
+        font-size: 0.92rem;
+        font-weight: 700;
+      }
 
-    #imagePreview {
-      display: block;
-      width: 100%;
-      max-height: 380px;
-      object-fit: contain;
-      border-radius: 8px;
-      background: #efefea;
-    }
+      #imagePreview {
+        display: block;
+        width: 100%;
+        max-height: 380px;
+        object-fit: contain;
+        border-radius: 8px;
+        background: #efefea;
+      }
 
-    #imageDetails {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 0.8rem;
-      overflow-wrap: anywhere;
-    }
+      #imageDetails {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 0.8rem;
+        overflow-wrap: anywhere;
+      }
 
-    .turnstile-wrap {
-      min-height: 65px;
-      margin-top: 16px;
-    }
+      .turnstile-wrap {
+        min-height: 65px;
+        margin-top: 16px;
+      }
 
-    button {
-      width: 100%;
-      min-height: 48px;
-      margin-top: 16px;
-      padding: 12px 18px;
-      border: 0;
-      border-radius: 10px;
-      background: var(--text);
-      color: #fff;
-      font: inherit;
-      font-weight: 750;
-      cursor: pointer;
-    }
+      button {
+        width: 100%;
+        min-height: 48px;
+        margin-top: 16px;
+        padding: 12px 18px;
+        border: 0;
+        border-radius: 10px;
+        background: var(--text);
+        color: #fff;
+        font: inherit;
+        font-weight: 750;
+        cursor: pointer;
+      }
 
-    button:disabled {
-      cursor: not-allowed;
-      opacity: 0.55;
-    }
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
 
-    .status {
-      display: none;
-      margin-top: 16px;
-      padding: 12px 14px;
-      border-radius: 10px;
-      overflow-wrap: anywhere;
-    }
+      .status {
+        display: none;
+        margin-top: 16px;
+        padding: 12px 14px;
+        border-radius: 10px;
+        overflow-wrap: anywhere;
+      }
 
-    .status.visible { display: block; }
-    .status.error { background: #fff0ef; color: var(--red); }
-    .status.success { background: #edf8f0; color: var(--green); }
-    .status.info { background: #f0f0eb; color: var(--text); }
+      .status.visible {
+        display: block;
+      }
+      .status.error {
+        background: #fff0ef;
+        color: var(--red);
+      }
+      .status.success {
+        background: #edf8f0;
+        color: var(--green);
+      }
+      .status.info {
+        background: #f0f0eb;
+        color: var(--text);
+      }
 
-    .results {
-      margin-top: 28px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
+      .results {
+        margin-top: 28px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+      }
 
-    .results h2 {
-      margin: 0 0 16px;
-      font-size: 1.2rem;
-    }
+      .results h2 {
+        margin: 0 0 16px;
+        font-size: 1.2rem;
+      }
 
-    .field { margin-bottom: 16px; }
+      .field {
+        margin-bottom: 16px;
+      }
 
-    .field input {
-      font-size: 1.1rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
+      .field input {
+        font-size: 1.1rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
 
-    .smallprint { margin: 20px 0 0; }
+      .smallprint {
+        margin: 20px 0 0;
+      }
 
-    footer {
-      margin-top: 22px;
-      color: var(--muted);
-      font-size: 0.85rem;
-      text-align: center;
-    }
-  </style>
+      footer {
+        margin-top: 22px;
+        color: var(--muted);
+        font-size: 0.85rem;
+        text-align: center;
+      }
+    </style>
 
-  <script
-    src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
-    async defer></script>
-</head>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+      async
+      defer
+    ></script>
+  </head>
 
-<body>
-<main>
-  <p class="brand">Tort &amp; Joie</p>
-  <h1>Spelling Bee Letter Helper</h1>
-  <p class="intro">
-    Take a photo of your puzzle or choose one from your photo library.
-    Check the preview, then let us identify the seven letters.
-  </p>
-
-  <section class="panel">
-    <label for="puzzleImage">Choose a puzzle photo</label>
-    <input
-      id="puzzleImage"
-      type="file"
-      accept="image/*">
-
-    <p class="hint">
-      On a phone, you can take a new photo or select an existing image.
-      Make sure all seven letter hexagons are visible.
-    </p>
-
-    <!-- The preview appears as soon as an image is selected. -->
-    <div id="previewBox" class="preview-box" aria-live="polite">
-      <p class="preview-heading">Photo preview</p>
-      <img id="imagePreview" alt="Preview of your selected puzzle photo">
-      <p id="imageDetails"></p>
-    </div>
-
-    <div class="turnstile-wrap">
-      <div id="turnstileWidget"></div>
-    </div>
-
-    <button id="identifyButton" type="button" disabled>
-      Identify letters
-    </button>
-
-    <div id="status" class="status" role="status" aria-live="polite"></div>
-
-    <div class="results">
-      <h2>Identified letters</h2>
-
-      <div class="field">
-        <label for="centerLetter">Center letter</label>
-        <input
-          id="centerLetter"
-          type="text"
-          maxlength="1"
-          autocomplete="off"
-          autocapitalize="characters"
-          placeholder="e.g. A">
-      </div>
-
-      <div class="field">
-        <label for="otherLetters">Other six letters</label>
-        <input
-          id="otherLetters"
-          type="text"
-          autocomplete="off"
-          autocapitalize="characters"
-          placeholder="e.g. B C D E F G">
-      </div>
-
-      <p class="hint">
-        Please check the result against your puzzle. You can edit the
-        letters in either field.
+  <body>
+    <main>
+      <p>
+        <img
+          src="/assets/images/bumblebee.png"
+          height="32"
+          width="32"
+          alt="Bumblebee"
+        />
       </p>
-    </div>
+      <p class="intro">
+        Take a photo of your puzzle or choose one from your photo library. Check
+        the preview, then identify the seven letters.
+      </p>
 
-    <p class="smallprint">
-      The selected photo is sent to an AI service to read its letters.
-      Avoid uploading photos containing personal or sensitive information.
-    </p>
-  </section>
+      <section class="panel">
+        <label for="puzzleImage">Choose a puzzle photo</label>
+        <input id="puzzleImage" type="file" accept="image/*" />
 
-  <footer>© Tort &amp; Joie</footer>
-</main>
+        <p class="hint">
+          On a phone, you can take a new photo or select an existing image. Make
+          sure all seven letter hexagons are visible.
+        </p>
 
-<script>
-(() => {
-  "use strict";
+        <!-- The preview appears as soon as an image is selected. -->
+        <div id="previewBox" class="preview-box" aria-live="polite">
+          <p class="preview-heading">Photo preview</p>
+          <img id="imagePreview" alt="Preview of your selected puzzle photo" />
+          <p id="imageDetails"></p>
+        </div>
 
-  const API_URL = "https://spelling-bee-api.jpalexa.workers.dev/";
-  const TURNSTILE_SITE_KEY = "0x4AAAAAAFgkT2gEOe-ettS3";
-  const MAX_IMAGE_BYTES = 15 * 1024 * 1024;
-  const MAX_DIMENSION = 1800;
+        <div class="turnstile-wrap">
+          <div id="turnstileWidget"></div>
+        </div>
 
-  const fileInput = document.getElementById("puzzleImage");
-  const previewBox = document.getElementById("previewBox");
-  const preview = document.getElementById("imagePreview");
-  const imageDetails = document.getElementById("imageDetails");
-  const button = document.getElementById("identifyButton");
-  const statusBox = document.getElementById("status");
-  const centerField = document.getElementById("centerLetter");
-  const otherField = document.getElementById("otherLetters");
+        <button id="identifyButton" type="button" disabled>
+          Identify letters
+        </button>
 
-  let selectedFile = null;
-  let previewUrl = null;
-  let turnstileWidgetId = null;
-  let turnstileToken = "";
+        <div id="status" class="status" role="status" aria-live="polite"></div>
 
-  function showStatus(message, type = "info") {
-    statusBox.textContent = message;
-    statusBox.className = "status visible " + type;
-  }
+        <form name="mainForm">
+          <div class="results">
+            <h2>Identified letters</h2>
 
-  function clearStatus() {
-    statusBox.textContent = "";
-    statusBox.className = "status";
-  }
+            <div class="field">
+              <label for="centerLetter">Center letter</label>
+              <input
+                id="centerLetter"
+                name="centerLetter"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                autocapitalize="characters"
+                placeholder="e.g. A"
+              />
+            </div>
 
-  function updateButton() {
-    button.disabled =
-      !selectedFile ||
-      !turnstileToken ||
-      button.dataset.busy === "true";
-  }
+            <div class="field">
+              <label for="otherLetters">Other six letters</label>
+              <input
+                id="otherLetters"
+                name="otherLetters"
+                type="text"
+                autocomplete="off"
+                autocapitalize="characters"
+                placeholder="e.g. B C D E F G"
+              />
+            </div>
 
-  // Render the anti-bot check when the Cloudflare script is ready.
-  function initialiseTurnstile() {
-    if (!window.turnstile) {
-      window.setTimeout(initialiseTurnstile, 150);
-      return;
-    }
+            <div class="minLength">
+              <label for="minLength">Minimum length</label>
+              <input
+                id="minLength"
+                name="minLength"
+                type="number"
+                autocomplete="off"
+                autocapitalize="characters"
+                value="4"
+                placeholder="4"
+                style="width: 100px"
+              />
+            </div>
 
-    turnstileWidgetId = window.turnstile.render("#turnstileWidget", {
-      sitekey: TURNSTILE_SITE_KEY,
-      theme: "light",
+            <p class="hint">
+              Please check the result against your puzzle. You can edit the
+              letters in either field.
+            </p>
 
-      callback(token) {
-        turnstileToken = token;
-        updateButton();
-        clearStatus();
-      },
+            <button
+              id="searchDictionary1BigButton"
+              type="button"
+              onclick="findValidWords(1)"
+            >
+              Search Dictionary 1 (big)
+            </button>
 
-      "expired-callback"() {
-        turnstileToken = "";
-        updateButton();
-      },
+            <button
+              id="searchDictionary2SmallButton"
+              type="button"
+              onclick="findValidWords(2)"
+            >
+              Search Dictionary 2 (small)
+            </button>
 
-      "error-callback"() {
-        turnstileToken = "";
-        updateButton();
-        showStatus(
-          "The security check could not load. Please refresh the page and try again.",
-          "error"
-        );
-      }
-    });
-  }
+            <hr />
 
-  initialiseTurnstile();
+            <span>Valid Words<span id="validWordsLabel"></span>:</span>
+            <div id="validWordsTable"></div>
+          </div>
+        </form>
+      </section>
+    </main>
 
-  // Show the image preview immediately after camera/library selection.
-  fileInput.addEventListener("change", () => {
-    clearStatus();
+    <script>
+      (() => {
+        "use strict";
 
-    const file = fileInput.files && fileInput.files[0];
-    selectedFile = file || null;
-    turnstileToken = "";
+        const API_URL = "https://spelling-bee-api.jpalexa.workers.dev/";
+        const TURNSTILE_SITE_KEY = "0x4AAAAAAFgkT2gEOe-ettS3";
+        const MAX_IMAGE_BYTES = 15 * 1024 * 1024;
+        const MAX_DIMENSION = 1800;
 
-    if (window.turnstile && turnstileWidgetId !== null) {
-      window.turnstile.reset(turnstileWidgetId);
-    }
+        const fileInput = document.getElementById("puzzleImage");
+        const previewBox = document.getElementById("previewBox");
+        const preview = document.getElementById("imagePreview");
+        const imageDetails = document.getElementById("imageDetails");
+        const button = document.getElementById("identifyButton");
+        const statusBox = document.getElementById("status");
+        const centerField = document.getElementById("centerLetter");
+        const otherField = document.getElementById("otherLetters");
 
-    if (previewUrl) {
-      URL.revokeObjectURL(previewUrl);
-      previewUrl = null;
-    }
+        let selectedFile = null;
+        let previewUrl = null;
+        let turnstileWidgetId = null;
+        let turnstileToken = "";
 
-    if (!file) {
-      previewBox.classList.remove("visible");
-      preview.removeAttribute("src");
-      imageDetails.textContent = "";
-      updateButton();
-      return;
-    }
+        function showStatus(message, type = "info") {
+          statusBox.textContent = message;
+          statusBox.className = "status visible " + type;
+        }
 
-    if (!file.type.startsWith("image/")) {
-      selectedFile = null;
-      previewBox.classList.remove("visible");
-      showStatus("Please choose an image file.", "error");
-      updateButton();
-      return;
-    }
+        function clearStatus() {
+          statusBox.textContent = "";
+          statusBox.className = "status";
+        }
 
-    previewUrl = URL.createObjectURL(file);
-    preview.onload = () => {
-      imageDetails.textContent =
-        `${file.name} · ${(file.size / (1024 * 1024)).toFixed(2)} MB`;
-    };
-    preview.onerror = () => {
-      previewBox.classList.remove("visible");
-      showStatus(
-        "Your browser could not preview this image format. Try a JPEG or PNG photo.",
-        "error"
-      );
-    };
+        function updateButton() {
+          button.disabled =
+            !selectedFile || !turnstileToken || button.dataset.busy === "true";
+        }
 
-    preview.src = previewUrl;
-    previewBox.classList.add("visible");
+        // Render the anti-bot check when the Cloudflare script is ready.
+        function initialiseTurnstile() {
+          if (!window.turnstile) {
+            window.setTimeout(initialiseTurnstile, 150);
+            return;
+          }
 
-    showStatus(
-      "Your photo is ready to preview. Complete the security check to continue.",
-      "info"
-    );
-    updateButton();
-  });
+          turnstileWidgetId = window.turnstile.render("#turnstileWidget", {
+            sitekey: TURNSTILE_SITE_KEY,
+            theme: "light",
 
-  // Resize and convert images to JPEG to reduce upload size.
-  // Some browsers cannot decode HEIC/HEIF files; those get a clear message.
-  async function prepareImage(file) {
-    let bitmap;
+            callback(token) {
+              turnstileToken = token;
+              updateButton();
+              clearStatus();
+            },
 
-    try {
-      if ("createImageBitmap" in window) {
-        bitmap = await createImageBitmap(file);
-      } else {
-        bitmap = await new Promise((resolve, reject) => {
-          const image = new Image();
-          const url = URL.createObjectURL(file);
+            "expired-callback"() {
+              turnstileToken = "";
+              updateButton();
+            },
 
-          image.onload = () => {
-            URL.revokeObjectURL(url);
-            resolve(image);
+            "error-callback"() {
+              turnstileToken = "";
+              updateButton();
+              showStatus(
+                "The security check could not load. Please refresh the page and try again.",
+                "error",
+              );
+            },
+          });
+        }
+
+        initialiseTurnstile();
+
+        // Show the image preview immediately after camera/library selection.
+        fileInput.addEventListener("change", () => {
+          clearStatus();
+
+          const file = fileInput.files && fileInput.files[0];
+          selectedFile = file || null;
+          turnstileToken = "";
+
+          if (window.turnstile && turnstileWidgetId !== null) {
+            window.turnstile.reset(turnstileWidgetId);
+          }
+
+          if (previewUrl) {
+            URL.revokeObjectURL(previewUrl);
+            previewUrl = null;
+          }
+
+          if (!file) {
+            previewBox.classList.remove("visible");
+            preview.removeAttribute("src");
+            imageDetails.textContent = "";
+            updateButton();
+            return;
+          }
+
+          if (!file.type.startsWith("image/")) {
+            selectedFile = null;
+            previewBox.classList.remove("visible");
+            showStatus("Please choose an image file.", "error");
+            updateButton();
+            return;
+          }
+
+          previewUrl = URL.createObjectURL(file);
+          preview.onload = () => {
+            imageDetails.textContent = `${file.name} · ${(file.size / (1024 * 1024)).toFixed(2)} MB`;
           };
-          image.onerror = () => {
-            URL.revokeObjectURL(url);
-            reject(new Error("Unsupported image format."));
+          preview.onerror = () => {
+            previewBox.classList.remove("visible");
+            showStatus(
+              "Your browser could not preview this image format. Try a JPEG or PNG photo.",
+              "error",
+            );
           };
-          image.src = url;
+
+          preview.src = previewUrl;
+          previewBox.classList.add("visible");
+
+          showStatus(
+            "Your photo is ready to preview. Complete the security check to continue.",
+            "info",
+          );
+          updateButton();
         });
+
+        // Resize and convert images to JPEG to reduce upload size.
+        // Some browsers cannot decode HEIC/HEIF files; those get a clear message.
+        async function prepareImage(file) {
+          let bitmap;
+
+          try {
+            if ("createImageBitmap" in window) {
+              bitmap = await createImageBitmap(file);
+            } else {
+              bitmap = await new Promise((resolve, reject) => {
+                const image = new Image();
+                const url = URL.createObjectURL(file);
+
+                image.onload = () => {
+                  URL.revokeObjectURL(url);
+                  resolve(image);
+                };
+                image.onerror = () => {
+                  URL.revokeObjectURL(url);
+                  reject(new Error("Unsupported image format."));
+                };
+                image.src = url;
+              });
+            }
+          } catch (_) {
+            throw new Error(
+              "This browser could not read the photo format. On iPhone, try a JPEG photo or set Settings → Camera → Formats to Most Compatible.",
+            );
+          }
+
+          const width = bitmap.width || bitmap.naturalWidth;
+          const height = bitmap.height || bitmap.naturalHeight;
+
+          if (!width || !height) {
+            if (bitmap.close) bitmap.close();
+            throw new Error(
+              "The image could not be read. Please choose another photo.",
+            );
+          }
+
+          const scale = Math.min(1, MAX_DIMENSION / Math.max(width, height));
+          const canvas = document.createElement("canvas");
+          canvas.width = Math.max(1, Math.round(width * scale));
+          canvas.height = Math.max(1, Math.round(height * scale));
+
+          const context = canvas.getContext("2d", { alpha: false });
+
+          if (!context) {
+            if (bitmap.close) bitmap.close();
+            throw new Error("Your browser could not prepare the image.");
+          }
+
+          context.fillStyle = "#ffffff";
+          context.fillRect(0, 0, canvas.width, canvas.height);
+          context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+
+          if (bitmap.close) bitmap.close();
+
+          let dataUrl = canvas.toDataURL("image/jpeg", 0.88);
+
+          if (dataUrl.length * 0.75 > MAX_IMAGE_BYTES) {
+            dataUrl = canvas.toDataURL("image/jpeg", 0.7);
+          }
+
+          const base64 = dataUrl.split(",")[1] || "";
+          const approximateBytes = Math.floor(base64.length * 0.75);
+
+          if (approximateBytes > MAX_IMAGE_BYTES) {
+            throw new Error(
+              "The image is still too large after resizing. Please choose a smaller photo.",
+            );
+          }
+
+          return dataUrl;
+        }
+
+        button.addEventListener("click", async () => {
+          if (!selectedFile) {
+            showStatus("Please choose a puzzle photo first.", "error");
+            return;
+          }
+
+          if (!turnstileToken) {
+            showStatus("Please complete the security check first.", "error");
+            return;
+          }
+
+          button.dataset.busy = "true";
+          button.textContent = "Reading letters…";
+          updateButton();
+
+          showStatus(
+            "Preparing your photo and identifying the letters…",
+            "info",
+          );
+
+          try {
+            const imageDataUrl = await prepareImage(selectedFile);
+
+            const response = await fetch(API_URL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                imageDataUrl,
+                turnstileToken,
+              }),
+            });
+
+            let result;
+
+            try {
+              result = await response.json();
+            } catch (_) {
+              throw new Error(
+                "The server response could not be read. Please try again.",
+              );
+            }
+
+            if (!response.ok) {
+              const messages = {
+                400: "The request or image could not be processed. Try another photo.",
+                403: "The security check failed. Please complete it again.",
+                413: "The image is too large. Please choose a smaller photo.",
+                429: "The request limit has been reached. Please wait before trying again.",
+                503: "The letter-reading service is temporarily unavailable. Try again later.",
+              };
+
+              throw new Error(
+                messages[response.status] ||
+                  result.error ||
+                  "Sorry, the request failed. Please try again.",
+              );
+            }
+
+            const center = String(result.centerLetter || "")
+              .trim()
+              .toUpperCase();
+            const rawOthers = result.otherLetters;
+
+            const others = Array.isArray(rawOthers)
+              ? rawOthers.map((letter) => String(letter).trim().toUpperCase())
+              : String(rawOthers || "")
+                  .toUpperCase()
+                  .match(/[A-Z]/g) || [];
+
+            const allLetters = [center, ...others];
+
+            const valid =
+              /^[A-Z]$/.test(center) &&
+              others.length === 6 &&
+              others.every((letter) => /^[A-Z]$/.test(letter)) &&
+              new Set(allLetters).size === 7;
+
+            if (!valid) {
+              throw new Error(
+                "The result did not contain seven distinct letters. Try a clearer photo showing all seven hexagons.",
+              );
+            }
+
+            centerField.value = center;
+            otherField.value = others.join(" ");
+
+            showStatus(
+              "Letters identified! Please double-check them against your puzzle.",
+              "success",
+            );
+          } catch (error) {
+            showStatus(
+              error && error.message
+                ? error.message
+                : "Something went wrong. Please try again.",
+              "error",
+            );
+          } finally {
+            button.dataset.busy = "false";
+            button.textContent = "Identify letters";
+
+            // Turnstile tokens are single-use, so reset after each attempt.
+            turnstileToken = "";
+
+            if (window.turnstile && turnstileWidgetId !== null) {
+              window.turnstile.reset(turnstileWidgetId);
+            }
+
+            updateButton();
+          }
+        });
+
+        centerField.addEventListener("input", () => {
+          centerField.value = centerField.value
+            .toUpperCase()
+            .replace(/[^A-Z]/g, "")
+            .slice(0, 1);
+        });
+
+        otherField.addEventListener("input", () => {
+          otherField.value = otherField.value
+            .toUpperCase()
+            .replace(/[^A-Z\s,]/g, "");
+        });
+      })();
+    </script>
+    <script>
+      window.findValidWords = async function (dictionaryIndex) {
+        const centerLetter = document.mainForm.centerLetter.value
+          .trim()
+          .toLowerCase();
+
+        const otherLetters = document.mainForm.otherLetters.value
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z]/g, "");
+
+        const allLetters = centerLetter + otherLetters;
+        const minLength = parseInt(document.mainForm.minLength.value, 10);
+
+        if (!/^[a-z]$/.test(centerLetter) || otherLetters.length !== 6) {
+          alert("Please enter one center letter and six other letters.");
+          return;
+        }
+
+        try {
+          const [selectedDictionary, extraDictionary] = await Promise.all([
+            loadDictionaryFile(`dictionary${dictionaryIndex}.txt`),
+            loadDictionaryFile("dictionaryExtra.txt"),
+          ]);
+
+          const uniqueWords = [
+            ...new Set(
+              (selectedDictionary + "\n" + extraDictionary)
+                .split(/\r?\n/)
+                .map((word) => word.toLowerCase().trim())
+                .filter(Boolean),
+            ),
+          ];
+
+          const validWords = uniqueWords
+            .filter(
+              (word) =>
+                word.length >= minLength &&
+                word.includes(centerLetter) &&
+                [...word].every((letter) => allLetters.includes(letter)),
+            )
+            .sort();
+
+          let tableHtml = "<table>";
+
+          for (const word of validWords) {
+            const isPangram = [...new Set(allLetters)].every((letter) =>
+              word.includes(letter),
+            );
+
+            tableHtml += `<tr><td>${
+              isPangram ? "<b>" + word + "</b>" : word
+            }</td></tr>`;
+          }
+
+          tableHtml += "</table>";
+
+          document.getElementById("validWordsLabel").textContent =
+            " (" + validWords.length + ")";
+
+          document.getElementById("validWordsTable").innerHTML = tableHtml;
+        } catch (error) {
+          console.error(error);
+          alert(
+            "Could not load the dictionary files. " +
+              "Check the filenames and server.",
+          );
+        }
+      };
+
+      async function loadDictionaryFile(filename) {
+        const response = await fetch(filename);
+
+        if (!response.ok) {
+          throw new Error(
+            `Failed to load ${filename}: HTTP ${response.status}`,
+          );
+        }
+
+        return await response.text();
       }
-    } catch (_) {
-      throw new Error(
-        "This browser could not read the photo format. On iPhone, try a JPEG photo or set Settings → Camera → Formats to Most Compatible."
-      );
-    }
-
-    const width = bitmap.width || bitmap.naturalWidth;
-    const height = bitmap.height || bitmap.naturalHeight;
-
-    if (!width || !height) {
-      if (bitmap.close) bitmap.close();
-      throw new Error("The image could not be read. Please choose another photo.");
-    }
-
-    const scale = Math.min(1, MAX_DIMENSION / Math.max(width, height));
-    const canvas = document.createElement("canvas");
-    canvas.width = Math.max(1, Math.round(width * scale));
-    canvas.height = Math.max(1, Math.round(height * scale));
-
-    const context = canvas.getContext("2d", { alpha: false });
-
-    if (!context) {
-      if (bitmap.close) bitmap.close();
-      throw new Error("Your browser could not prepare the image.");
-    }
-
-    context.fillStyle = "#ffffff";
-    context.fillRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-
-    if (bitmap.close) bitmap.close();
-
-    let dataUrl = canvas.toDataURL("image/jpeg", 0.88);
-
-    if (dataUrl.length * 0.75 > MAX_IMAGE_BYTES) {
-      dataUrl = canvas.toDataURL("image/jpeg", 0.70);
-    }
-
-    const base64 = dataUrl.split(",")[1] || "";
-    const approximateBytes = Math.floor(base64.length * 0.75);
-
-    if (approximateBytes > MAX_IMAGE_BYTES) {
-      throw new Error(
-        "The image is still too large after resizing. Please choose a smaller photo."
-      );
-    }
-
-    return dataUrl;
-  }
-
-  button.addEventListener("click", async () => {
-    if (!selectedFile) {
-      showStatus("Please choose a puzzle photo first.", "error");
-      return;
-    }
-
-    if (!turnstileToken) {
-      showStatus("Please complete the security check first.", "error");
-      return;
-    }
-
-    button.dataset.busy = "true";
-    button.textContent = "Reading letters…";
-    updateButton();
-
-    showStatus("Preparing your photo and identifying the letters…", "info");
-
-    try {
-      const imageDataUrl = await prepareImage(selectedFile);
-
-      const response = await fetch(API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          imageDataUrl,
-          turnstileToken
-        })
-      });
-
-      let result;
-
-      try {
-        result = await response.json();
-      } catch (_) {
-        throw new Error("The server response could not be read. Please try again.");
-      }
-
-      if (!response.ok) {
-        const messages = {
-          400: "The request or image could not be processed. Try another photo.",
-          403: "The security check failed. Please complete it again.",
-          413: "The image is too large. Please choose a smaller photo.",
-          429: "The request limit has been reached. Please wait before trying again.",
-          503: "The letter-reading service is temporarily unavailable. Try again later."
-        };
-
-        throw new Error(
-          messages[response.status] ||
-          result.error ||
-          "Sorry, the request failed. Please try again."
-        );
-      }
-
-      const center = String(result.centerLetter || "").trim().toUpperCase();
-      const rawOthers = result.otherLetters;
-
-      const others = Array.isArray(rawOthers)
-        ? rawOthers.map(letter => String(letter).trim().toUpperCase())
-        : String(rawOthers || "").toUpperCase().match(/[A-Z]/g) || [];
-
-      const allLetters = [center, ...others];
-
-      const valid =
-        /^[A-Z]$/.test(center) &&
-        others.length === 6 &&
-        others.every(letter => /^[A-Z]$/.test(letter)) &&
-        new Set(allLetters).size === 7;
-
-      if (!valid) {
-        throw new Error(
-          "The result did not contain seven distinct letters. Try a clearer photo showing all seven hexagons."
-        );
-      }
-
-      centerField.value = center;
-      otherField.value = others.join(" ");
-
-      showStatus(
-        "Letters identified! Please double-check them against your puzzle.",
-        "success"
-      );
-
-    } catch (error) {
-      showStatus(
-        error && error.message
-          ? error.message
-          : "Something went wrong. Please try again.",
-        "error"
-      );
-
-    } finally {
-      button.dataset.busy = "false";
-      button.textContent = "Identify letters";
-
-      // Turnstile tokens are single-use, so reset after each attempt.
-      turnstileToken = "";
-
-      if (window.turnstile && turnstileWidgetId !== null) {
-        window.turnstile.reset(turnstileWidgetId);
-      }
-
-      updateButton();
-    }
-  });
-
-  centerField.addEventListener("input", () => {
-    centerField.value = centerField.value
-      .toUpperCase()
-      .replace(/[^A-Z]/g, "")
-      .slice(0, 1);
-  });
-
-  otherField.addEventListener("input", () => {
-    otherField.value = otherField.value
-      .toUpperCase()
-      .replace(/[^A-Z\s,]/g, "");
-  });
-})();
-</script>
-</body>
+    </script>
+  </body>
 </html>

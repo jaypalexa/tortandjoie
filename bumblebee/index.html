@@ -22,8 +22,6 @@
         --text: #25251f;
         --muted: #66665f;
         --border: #deded5;
-        --gold: #f4c84a;
-        --gray-hex: #e7e7e2;
         --green: #276749;
         --red: #a12b2b;
       }
@@ -104,8 +102,7 @@
         padding: 8px;
       }
 
-      .hint,
-      .smallprint {
+      .hint {
         color: var(--muted);
         font-size: 0.88rem;
       }
@@ -219,10 +216,6 @@
         text-transform: uppercase;
       }
 
-      .smallprint {
-        margin: 20px 0 0;
-      }
-
       footer {
         margin-top: 22px;
         color: var(--muted);
@@ -230,12 +223,6 @@
         text-align: center;
       }
     </style>
-
-    <script
-      src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
-      async
-      defer
-    ></script>
   </head>
 
   <body>
@@ -315,9 +302,7 @@
                 name="minLength"
                 type="number"
                 autocomplete="off"
-                autocapitalize="characters"
                 value="4"
-                placeholder="4"
                 style="width: 100px"
               />
             </div>
@@ -391,39 +376,87 @@
         }
 
         // Render the anti-bot check when the Cloudflare script is ready.
-        function initialiseTurnstile() {
+
+        // Load Turnstile once and handle success or failure explicitly.
+        let turnstileLoadStarted = false;
+
+        function initializeTurnstile() {
+          if (turnstileWidgetId !== null) return;
+
           if (!window.turnstile) {
-            window.setTimeout(initialiseTurnstile, 150);
+            showStatus(
+              "The security check loaded incorrectly. Please refresh the page and try again.",
+              "error",
+            );
             return;
           }
 
-          turnstileWidgetId = window.turnstile.render("#turnstileWidget", {
-            sitekey: TURNSTILE_SITE_KEY,
-            theme: "light",
+          try {
+            turnstileWidgetId = window.turnstile.render("#turnstileWidget", {
+              sitekey: TURNSTILE_SITE_KEY,
+              theme: "light",
 
-            callback(token) {
-              turnstileToken = token;
-              updateButton();
-              clearStatus();
-            },
+              callback(token) {
+                turnstileToken = token;
+                updateButton();
+                clearStatus();
+              },
 
-            "expired-callback"() {
-              turnstileToken = "";
-              updateButton();
-            },
+              "expired-callback"() {
+                turnstileToken = "";
+                updateButton();
+              },
 
-            "error-callback"() {
-              turnstileToken = "";
-              updateButton();
-              showStatus(
-                "The security check could not load. Please refresh the page and try again.",
-                "error",
-              );
-            },
-          });
+              "error-callback"() {
+                turnstileToken = "";
+                updateButton();
+                showStatus(
+                  "The security check could not be completed. Please try again.",
+                  "error",
+                );
+              },
+            });
+          } catch (error) {
+            turnstileWidgetId = null;
+            turnstileToken = "";
+            updateButton();
+
+            showStatus(
+              "The security check could not be initialized. Please refresh the page and try again.",
+              "error",
+            );
+
+            console.error("Turnstile initialization failed:", error);
+          }
         }
 
-        initialiseTurnstile();
+        function loadTurnstile() {
+          if (turnstileLoadStarted) return;
+          turnstileLoadStarted = true;
+
+          const script = document.createElement("script");
+          script.src =
+            "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+          script.async = true;
+
+          script.onload = initializeTurnstile;
+
+          script.onerror = () => {
+            turnstileToken = "";
+            updateButton();
+
+            showStatus(
+              "The security check could not load. Check your connection and refresh the page to try again.",
+              "error",
+            );
+
+            console.error("Failed to load the Cloudflare Turnstile script.");
+          };
+
+          document.head.appendChild(script);
+        }
+
+        loadTurnstile();
 
         // Show the image preview immediately after camera/library selection.
         fileInput.addEventListener("change", () => {
@@ -463,11 +496,23 @@
             imageDetails.textContent = `${file.name} · ${(file.size / (1024 * 1024)).toFixed(2)} MB`;
           };
           preview.onerror = () => {
+            selectedFile = null;
+
+            if (previewUrl) {
+              URL.revokeObjectURL(previewUrl);
+              previewUrl = null;
+            }
+
+            preview.removeAttribute("src");
             previewBox.classList.remove("visible");
+            imageDetails.textContent = "";
+
             showStatus(
-              "Your browser could not preview this image format. Try a JPEG or PNG photo.",
+              "Could not preview this image. Try a JPEG or PNG photo.",
               "error",
             );
+
+            updateButton();
           };
 
           preview.src = previewUrl;

@@ -359,8 +359,6 @@
         let previewUrl = null;
         let turnstileWidgetId = null;
         let turnstileToken = "";
-        let imageValidationPassed = false;
-        let cvPromise = null;
 
         function showStatus(message, type = "info") {
           statusBox.textContent = message;
@@ -374,7 +372,7 @@
 
         function updateButton() {
           button.disabled =
-            !selectedFile || !imageValidationPassed || !turnstileToken || button.dataset.busy === "true";
+            !selectedFile || !turnstileToken || button.dataset.busy === "true";
         }
 
         // Render the anti-bot check when the Cloudflare script is ready.
@@ -432,256 +430,6 @@
           }
         }
 
-        // Load OpenCV.js only when an image needs checking. Image processing stays in this browser.
-        function loadOpenCV() {
-          if (cvPromise) return cvPromise;
-
-          cvPromise = new Promise((resolve, reject) => {
-            const script = document.createElement("script");
-            script.src = "https://docs.opencv.org/4.x/opencv.js";
-            script.async = true;
-
-            const timeout = window.setTimeout(() => {
-              reject(new Error("The image-checking tool took too long to load. Please refresh and try again."));
-            }, 20000);
-
-            function finish() {
-              if (window.cv && typeof window.cv.Mat === "function") {
-                clearTimeout(timeout);
-                resolve(window.cv);
-                return true;
-              }
-              return false;
-            }
-
-            script.onload = () => {
-              if (finish()) return;
-              if (window.cv && typeof window.cv.then === "function") {
-                window.cv.then((readyCv) => {
-                  clearTimeout(timeout);
-                  resolve(readyCv);
-                }).catch((error) => {
-                  clearTimeout(timeout);
-                  reject(error);
-                });
-                return;
-              }
-              if (window.cv) {
-                window.cv.onRuntimeInitialized = () => {
-                  if (!finish()) {
-                    clearTimeout(timeout);
-                    reject(new Error("The image-checking tool could not initialize."));
-                  }
-                };
-              } else {
-                clearTimeout(timeout);
-                reject(new Error("The image-checking tool could not load."));
-              }
-            };
-
-            script.onerror = () => {
-              clearTimeout(timeout);
-              reject(new Error("The image-checking tool could not load. Check your connection and try again."));
-            };
-
-            document.head.appendChild(script);
-          }).catch((error) => {
-            cvPromise = null;
-            throw error;
-          });
-
-          return cvPromise;
-        }
-
-        function findHexagonCandidates(cv, mask, minArea) {
-          const contours = new cv.MatVector();
-          const hierarchy = new cv.Mat();
-          const candidates = [];
-
-          cv.findContours(mask, contours, hierarchy, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE);
-
-          for (let i = 0; i < contours.size(); i++) {
-            const contour = contours.get(i);
-            const area = cv.contourArea(contour);
-            if (area < minArea) {
-              contour.delete();
-              continue;
-            }
-
-            const perimeter = cv.arcLength(contour, true);
-            const approx = new cv.Mat();
-            cv.approxPolyDP(contour, approx, 0.035 * perimeter, true);
-            const vertices = approx.rows;
-            const rect = cv.boundingRect(contour);
-            const ratio = rect.height ? rect.width / rect.height : 0;
-            const rectArea = rect.width * rect.height;
-            const fillRatio = rectArea ? area / rectArea : 0;
-
-            // A rough shape filter, deliberately tolerant of camera angle and imperfect edges.
-            if (
-              vertices >= 5 && vertices <= 7 &&
-              ratio >= 0.55 && ratio <= 1.65 &&
-              fillRatio >= 0.45 && fillRatio <= 0.95
-            ) {
-              candidates.push({
-                x: rect.x + rect.width / 2,
-                y: rect.y + rect.height / 2,
-                width: rect.width,
-                height: rect.height,
-                area,
-              });
-            }
-
-            approx.delete();
-            contour.delete();
-          }
-
-          contours.delete();
-          hierarchy.delete();
-          return candidates;
-        }
-
-        async function validatePuzzleImage(file) {
-          // Basic checks before doing more expensive image processing.
-          if (!file || !file.type.startsWith("image/")) {
-            throw new Error("Please choose an image file.");
-          }
-          if (file.size > 25 * 1024 * 1024) {
-            throw new Error("That photo is larger than 25 MB. Please choose a smaller image.");
-          }
-
-          let bitmap;
-          try {
-            bitmap = await createImageBitmap(file);
-          } catch (_) {
-            throw new Error("This photo could not be opened by your browser. Try a JPEG or PNG image.");
-          }
-
-          const width = bitmap.width;
-          const height = bitmap.height;
-          if (width < 250 || height < 250) {
-            bitmap.close();
-            throw new Error("This image is too small to check reliably. Please choose a larger photo.");
-          }
-          if (width * height > 60000000) {
-            bitmap.close();
-            throw new Error("This photo has an unusually high resolution. Please choose a smaller image.");
-          }
-
-          // Work on a small copy to keep browser processing responsive.
-          const maxSide = 900;
-          const scale = Math.min(1, maxSide / Math.max(width, height));
-          const canvas = document.createElement("canvas");
-          canvas.width = Math.max(1, Math.round(width * scale));
-          canvas.height = Math.max(1, Math.round(height * scale));
-          const context = canvas.getContext("2d", { willReadFrequently: true });
-          if (!context) {
-            bitmap.close();
-            throw new Error("Your browser could not inspect this image.");
-          }
-          context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-          bitmap.close();
-
-          const cv = await loadOpenCV();
-          const src = cv.imread(canvas);
-          const rgb = new cv.Mat();
-          const hsv = new cv.Mat();
-          const goldMask = new cv.Mat();
-          const grayMask = new cv.Mat();
-          const kernel = cv.Mat.ones(7, 7, cv.CV_8U);
-          const goldContoursMask = new cv.Mat();
-          const grayContoursMask = new cv.Mat();
-
-          try {
-            cv.cvtColor(src, rgb, cv.COLOR_RGBA2RGB);
-            cv.cvtColor(rgb, hsv, cv.COLOR_RGB2HSV);
-
-            // OpenCV HSV hue runs from 0 to 180. Thresholds allow for varied screens and lighting.
-            const goldLow = new cv.Mat(hsv.rows, hsv.cols, hsv.type(), new cv.Scalar(8, 45, 90, 0));
-            const goldHigh = new cv.Mat(hsv.rows, hsv.cols, hsv.type(), new cv.Scalar(42, 255, 255, 255));
-            cv.inRange(hsv, goldLow, goldHigh, goldMask);
-            goldLow.delete();
-            goldHigh.delete();
-
-            // Grey hexagons have low saturation and are darker than the white page background.
-            const grayLow = new cv.Mat(hsv.rows, hsv.cols, hsv.type(), new cv.Scalar(0, 0, 105, 0));
-            const grayHigh = new cv.Mat(hsv.rows, hsv.cols, hsv.type(), new cv.Scalar(180, 75, 248, 255));
-            cv.inRange(hsv, grayLow, grayHigh, grayMask);
-            grayLow.delete();
-            grayHigh.delete();
-
-            cv.morphologyEx(goldMask, goldContoursMask, cv.MORPH_CLOSE, kernel);
-            cv.morphologyEx(grayMask, grayContoursMask, cv.MORPH_CLOSE, kernel);
-
-            const minArea = canvas.width * canvas.height * 0.00035;
-            const gold = findHexagonCandidates(cv, goldContoursMask, minArea)
-              .filter((shape) => shape.area > canvas.width * canvas.height * 0.001);
-            const greys = findHexagonCandidates(cv, grayContoursMask, minArea);
-
-            if (gold.length === 0) {
-              throw new Error("I couldn't find a gold/yellow center hexagon. Please use a photo showing the whole puzzle clearly.");
-            }
-
-            // Pick the largest plausible gold region as the centre candidate.
-            gold.sort((a, b) => b.area - a.area);
-            const center = gold[0];
-            const centerSize = (center.width + center.height) / 2;
-
-            // Keep grey candidates near the gold centre and roughly the same size.
-            const nearby = greys.map((shape) => {
-              const dx = shape.x - center.x;
-              const dy = shape.y - center.y;
-              return {
-                ...shape,
-                distance: Math.hypot(dx, dy),
-                angle: (Math.atan2(dy, dx) + Math.PI * 2) % (Math.PI * 2),
-                size: (shape.width + shape.height) / 2,
-              };
-            }).filter((shape) =>
-              shape.distance >= centerSize * 0.55 &&
-              shape.distance <= centerSize * 2.5 &&
-              shape.size >= centerSize * 0.45 &&
-              shape.size <= centerSize * 1.8
-            );
-
-            if (nearby.length < 6) {
-              throw new Error("I couldn't find six grey hexagons around the gold centre. Make sure all seven hexagons are visible and try a straighter, clearer photo.");
-            }
-
-            // If other grey shapes are present, test the six closest to the centre.
-            nearby.sort((a, b) => a.distance - b.distance);
-            const six = nearby.slice(0, 6);
-            const distances = six.map((shape) => shape.distance / centerSize);
-            const averageDistance = distances.reduce((sum, value) => sum + value, 0) / 6;
-            const distanceSpread = Math.max(...distances) - Math.min(...distances);
-            const angles = six.map((shape) => shape.angle).sort((a, b) => a - b);
-            const gaps = angles.map((angle, index) => {
-              const next = index === angles.length - 1 ? angles[0] + Math.PI * 2 : angles[index + 1];
-              return (next - angle) * 180 / Math.PI;
-            });
-
-            if (
-              averageDistance < 0.65 ||
-              averageDistance > 2.2 ||
-              distanceSpread > 0.9 ||
-              gaps.some((gap) => gap < 22 || gap > 105)
-            ) {
-              throw new Error("The image doesn't look like the expected Spelling Bee layout. Try a photo with one gold centre and six grey hexagons clearly visible.");
-            }
-
-            return true;
-          } finally {
-            src.delete();
-            rgb.delete();
-            hsv.delete();
-            goldMask.delete();
-            grayMask.delete();
-            kernel.delete();
-            goldContoursMask.delete();
-            grayContoursMask.delete();
-          }
-        }
-
         function loadTurnstile() {
           if (turnstileLoadStarted) return;
           turnstileLoadStarted = true;
@@ -716,7 +464,6 @@
 
           const file = fileInput.files && fileInput.files[0];
           selectedFile = file || null;
-          imageValidationPassed = false;
           turnstileToken = "";
 
           if (window.turnstile && turnstileWidgetId !== null) {
@@ -745,35 +492,11 @@
           }
 
           previewUrl = URL.createObjectURL(file);
-          preview.onload = async () => {
+          preview.onload = () => {
             imageDetails.textContent = `${file.name} · ${(file.size / (1024 * 1024)).toFixed(2)} MB`;
-            showStatus("Checking image quality and puzzle layout on your device…", "info");
-
-            try {
-              await validatePuzzleImage(file);
-              // The user may have selected a different file while validation was running.
-              if (selectedFile !== file) return;
-              imageValidationPassed = true;
-              showStatus(
-                "The image looks like a Spelling Bee puzzle. Complete the security check to identify the letters.",
-                "success",
-              );
-            } catch (error) {
-              if (selectedFile !== file) return;
-              selectedFile = null;
-              imageValidationPassed = false;
-              fileInput.value = "";
-              showStatus(
-                error?.message || "Could not verify the puzzle layout. Please choose another photo.",
-                "error",
-              );
-            }
-
-            updateButton();
           };
           preview.onerror = () => {
             selectedFile = null;
-            imageValidationPassed = false;
 
             if (previewUrl) {
               URL.revokeObjectURL(previewUrl);
@@ -881,11 +604,6 @@
         button.addEventListener("click", async () => {
           if (!selectedFile) {
             showStatus("Please choose a puzzle photo first.", "error");
-            return;
-          }
-
-          if (!imageValidationPassed) {
-            showStatus("Please wait for the image and puzzle-layout checks to finish.", "error");
             return;
           }
 

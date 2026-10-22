@@ -1,812 +1,606 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Tort and Joie - Bumblebee</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="/assets/images/bumblebee.png"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>Spelling Bee Letter Helper | Tort &amp; Joie</title>
+  <meta name="description" content="Upload a photo of your Spelling Bee puzzle to identify its seven letters.">
 
-    <style>
-      body {
-        background: lightyellow;
-        font-family: Arial, sans-serif;
-        padding: 12px;
-      }
+  <style>
+    :root {
+      --background: #f7f5ef;
+      --card: #ffffff;
+      --text: #25251f;
+      --muted: #66665f;
+      --border: #deded5;
+      --gold: #f4c84a;
+      --gray-hex: #e7e7e2;
+      --green: #276749;
+      --red: #a12b2b;
+    }
 
-      input[type="text"] {
-        font-size: 24px;
-        text-transform: uppercase;
-      }
+    * { box-sizing: border-box; }
 
-      .letter-input {
-        height: 35px;
-        text-align: center;
-      }
+    body {
+      margin: 0;
+      padding: 24px 14px 40px;
+      background: var(--background);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
 
-      #cameraInput {
-        display: none;
-      }
+    main {
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto;
+    }
 
-      .camera-button {
-        display: inline-block;
-        padding: 12px 18px;
-        background: #f3c84b;
-        border: 1px solid #98751b;
-        border-radius: 8px;
-        font-size: 17px;
-        cursor: pointer;
-      }
+    .brand {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
 
-      #scanStatus {
-        margin-top: 12px;
-        white-space: pre-wrap;
-      }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.8rem, 6vw, 2.5rem);
+      line-height: 1.15;
+    }
 
-      #photoPreview {
-        display: none;
-        max-width: 100%;
-        max-height: 400px;
-        margin-top: 12px;
-      }
-    </style>
-  </head>
+    .intro {
+      margin: 0 0 24px;
+      color: var(--muted);
+    }
 
-  <body>
-    <p>
-      <img
-        src="/assets/images/bumblebee.png"
-        height="32"
-        width="32"
-        alt="Bumblebee"
-      />
+    .panel {
+      padding: clamp(18px, 5vw, 28px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: 0 8px 28px rgb(25 25 15 / 5%);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    input[type="file"],
+    input[type="text"] {
+      display: block;
+      width: 100%;
+      min-height: 46px;
+      padding: 10px 12px;
+      border: 1px solid #c9cabe;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+    }
+
+    input[type="file"] { padding: 8px; }
+
+    .hint, .smallprint {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .hint { margin: 8px 0 16px; }
+
+    /* Uploaded image preview */
+    .preview-box {
+      display: none;
+      margin: 16px 0 20px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fafaf7;
+    }
+
+    .preview-box.visible { display: block; }
+
+    .preview-heading {
+      margin: 0 0 10px;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    #imagePreview {
+      display: block;
+      width: 100%;
+      max-height: 380px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #efefea;
+    }
+
+    #imageDetails {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      overflow-wrap: anywhere;
+    }
+
+    .turnstile-wrap {
+      min-height: 65px;
+      margin-top: 16px;
+    }
+
+    button {
+      width: 100%;
+      min-height: 48px;
+      margin-top: 16px;
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--text);
+      color: #fff;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.55;
+    }
+
+    .status {
+      display: none;
+      margin-top: 16px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      overflow-wrap: anywhere;
+    }
+
+    .status.visible { display: block; }
+    .status.error { background: #fff0ef; color: var(--red); }
+    .status.success { background: #edf8f0; color: var(--green); }
+    .status.info { background: #f0f0eb; color: var(--text); }
+
+    .results {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .results h2 {
+      margin: 0 0 16px;
+      font-size: 1.2rem;
+    }
+
+    .field { margin-bottom: 16px; }
+
+    .field input {
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .smallprint { margin: 20px 0 0; }
+
+    footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+  </style>
+
+  <script
+    src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+    async defer></script>
+</head>
+
+<body>
+<main>
+  <p class="brand">Tort &amp; Joie</p>
+  <h1>Spelling Bee Letter Helper</h1>
+  <p class="intro">
+    Take a photo of your puzzle or choose one from your photo library.
+    Check the preview, then let us identify the seven letters.
+  </p>
+
+  <section class="panel">
+    <label for="puzzleImage">Choose a puzzle photo</label>
+    <input
+      id="puzzleImage"
+      type="file"
+      accept="image/*"
+      capture="environment">
+
+    <p class="hint">
+      On a phone, you can take a new photo or select an existing image.
+      Make sure all seven letter hexagons are visible.
     </p>
 
-    <h2>Spelling Bee Scanner</h2>
+    <!-- The preview appears as soon as an image is selected. -->
+    <div id="previewBox" class="preview-box" aria-live="polite">
+      <p class="preview-heading">Photo preview</p>
+      <img id="imagePreview" alt="Preview of your selected puzzle photo">
+      <p id="imageDetails"></p>
+    </div>
 
-    <p>
-      <label class="camera-button" for="cameraInput">
-        📷 Take photo &amp; scan
-      </label>
-      <input
-        id="cameraInput"
-        type="file"
-        accept="image/*"
-        capture="environment"
-      />
-    </p>
+    <div class="turnstile-wrap">
+      <div id="turnstileWidget"></div>
+    </div>
 
-    <img id="photoPreview" alt="Photo to scan" />
+    <button id="identifyButton" type="button" disabled>
+      Identify letters
+    </button>
 
-    <p id="scanStatus" role="status">
-      Take a photo of the puzzle to recognise its letters.
-    </p>
+    <div id="status" class="status" role="status" aria-live="polite"></div>
 
-    <form name="mainForm">
-      <p>
-        <label for="centerLetter">Center letter:</label>
+    <div class="results">
+      <h2>Identified letters</h2>
+
+      <div class="field">
+        <label for="centerLetter">Center letter</label>
         <input
           id="centerLetter"
           type="text"
-          name="centerLetter"
           maxlength="1"
-          class="letter-input"
-          style="width: 35px"
-        />
-      </p>
+          autocomplete="off"
+          autocapitalize="characters"
+          placeholder="e.g. A">
+      </div>
 
-      <p>
-        <label for="otherLetters">Other letters:</label>
+      <div class="field">
+        <label for="otherLetters">Other six letters</label>
         <input
           id="otherLetters"
           type="text"
-          name="otherLetters"
-          maxlength="6"
-          style="width: 150px"
-        />
+          autocomplete="off"
+          autocapitalize="characters"
+          placeholder="e.g. B C D E F G">
+      </div>
+
+      <p class="hint">
+        Please check the result against your puzzle. You can edit the
+        letters in either field.
       </p>
+    </div>
 
-      <p>
-        <label for="minLength">Minimum length:</label>
-        <input
-          id="minLength"
-          type="number"
-          name="minLength"
-          value="4"
-          style="width: 50px"
-        />
-      </p>
+    <p class="smallprint">
+      The selected photo is sent to an AI service to read its letters.
+      Avoid uploading photos containing personal or sensitive information.
+    </p>
+  </section>
 
-      <p>
-        <input
-          type="button"
-          value="Search Dictionary 1 (big)"
-          onclick="findValidWords(1)"
-        />
-      </p>
+  <footer>© Tort &amp; Joie</footer>
+</main>
 
-      <p>
-        <input
-          type="button"
-          value="Search Dictionary 2 (small)"
-          onclick="findValidWords(2)"
-        />
-      </p>
+<script>
+(() => {
+  "use strict";
 
-      <hr />
+  const API_URL = "https://spelling-bee-api.jpalexa.workers.dev/";
+  const TURNSTILE_SITE_KEY = "0x4AAAAAAFgkT2gEOe-ettS3";
+  const MAX_IMAGE_BYTES = 15 * 1024 * 1024;
+  const MAX_DIMENSION = 1800;
 
-      <span>Valid Words<span id="validWordsLabel"></span>:</span>
-      <p id="validWordsTable"></p>
-    </form>
+  const fileInput = document.getElementById("puzzleImage");
+  const previewBox = document.getElementById("previewBox");
+  const preview = document.getElementById("imagePreview");
+  const imageDetails = document.getElementById("imageDetails");
+  const button = document.getElementById("identifyButton");
+  const statusBox = document.getElementById("status");
+  const centerField = document.getElementById("centerLetter");
+  const otherField = document.getElementById("otherLetters");
 
-    <script type="module">
-      /*
-       * Adaptive Spelling Bee scanner.
-       *
-       * 1. Detect the gold centre hexagon by colour.
-       * 2. Estimate tile size from the detected gold region.
-       * 3. Locate the six surrounding tiles.
-       * 4. OCR each tile using three sequential crop passes.
-       * 5. Queue all OCR predictions to prevent concurrent ONNX session runs.
-       */
+  let selectedFile = null;
+  let previewUrl = null;
+  let turnstileWidgetId = null;
+  let turnstileToken = "";
 
-      let paddleOCR = null;
-      let paddleOCRLoading = null;
+  function showStatus(message, type = "info") {
+    statusBox.textContent = message;
+    statusBox.className = "status visible " + type;
+  }
 
-      // Serialise every prediction using the shared OCR instance.
-      let ocrPredictionQueue = Promise.resolve();
+  function clearStatus() {
+    statusBox.textContent = "";
+    statusBox.className = "status";
+  }
 
-      function queuedOCRPredict(ocr, canvas, options) {
-        const task = ocrPredictionQueue.then(() =>
-          ocr.predict(canvas, options),
+  function updateButton() {
+    button.disabled =
+      !selectedFile ||
+      !turnstileToken ||
+      button.dataset.busy === "true";
+  }
+
+  // Render the anti-bot check when the Cloudflare script is ready.
+  function initialiseTurnstile() {
+    if (!window.turnstile) {
+      window.setTimeout(initialiseTurnstile, 150);
+      return;
+    }
+
+    turnstileWidgetId = window.turnstile.render("#turnstileWidget", {
+      sitekey: TURNSTILE_SITE_KEY,
+      theme: "light",
+
+      callback(token) {
+        turnstileToken = token;
+        updateButton();
+        clearStatus();
+      },
+
+      "expired-callback"() {
+        turnstileToken = "";
+        updateButton();
+      },
+
+      "error-callback"() {
+        turnstileToken = "";
+        updateButton();
+        showStatus(
+          "The security check could not load. Please refresh the page and try again.",
+          "error"
         );
-
-        // A failed prediction must not permanently block the queue.
-        ocrPredictionQueue = task.then(
-          () => undefined,
-          () => undefined,
-        );
-
-        return task;
       }
+    });
+  }
 
-      const cameraInput = document.getElementById("cameraInput");
-      const photoPreview = document.getElementById("photoPreview");
-      const scanStatus = document.getElementById("scanStatus");
+  initialiseTurnstile();
 
-      const TILE_NAMES = [
-        "center",
-        "top",
-        "upperLeft",
-        "upperRight",
-        "lowerLeft",
-        "lowerRight",
-        "bottom",
-      ];
+  // Show the image preview immediately after camera/library selection.
+  fileInput.addEventListener("change", () => {
+    clearStatus();
 
-      const TILE_OFFSETS = {
-        center: { x: 0.0, y: 0.0 },
-        top: { x: 0.0, y: -1.02 },
-        upperLeft: { x: -0.88, y: -0.51 },
-        upperRight: { x: 0.88, y: -0.51 },
-        lowerLeft: { x: -0.88, y: 0.51 },
-        lowerRight: { x: 0.88, y: 0.51 },
-        bottom: { x: 0.0, y: 1.02 },
-      };
+    const file = fileInput.files && fileInput.files[0];
+    selectedFile = file || null;
+    turnstileToken = "";
 
-      async function getPaddleOCR() {
-        if (paddleOCR) return paddleOCR;
+    if (window.turnstile && turnstileWidgetId !== null) {
+      window.turnstile.reset(turnstileWidgetId);
+    }
 
-        if (!paddleOCRLoading) {
-          paddleOCRLoading = (async () => {
-            scanStatus.textContent = "Loading PaddleOCR.js and its models...";
+    if (previewUrl) {
+      URL.revokeObjectURL(previewUrl);
+      previewUrl = null;
+    }
 
-            const { PaddleOCR } =
-              await import("https://esm.sh/@paddleocr/paddleocr-js@0.4.2?bundle");
+    if (!file) {
+      previewBox.classList.remove("visible");
+      preview.removeAttribute("src");
+      imageDetails.textContent = "";
+      updateButton();
+      return;
+    }
 
-            const modelBase =
-              "https://huggingface.co/LunarOilRig/paddleocr-onnx/resolve/main";
+    if (!file.type.startsWith("image/")) {
+      selectedFile = null;
+      previewBox.classList.remove("visible");
+      showStatus("Please choose an image file.", "error");
+      updateButton();
+      return;
+    }
 
-            const instance = await PaddleOCR.create({
-              lang: "en",
-              textDetectionModelName: "PP-OCRv5_mobile_det",
-              textDetectionModelAsset: {
-                url: `${modelBase}/PP-OCRv5_mobile_det_onnx_infer.tar`,
-              },
-              textRecognitionModelName: "PP-OCRv5_mobile_rec",
-              textRecognitionModelAsset: {
-                url: `${modelBase}/PP-OCRv5_mobile_rec_onnx_infer.tar`,
-              },
-              ortOptions: {
-                backend: "wasm",
-                wasmPaths: "https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/",
-              },
-            });
+    previewUrl = URL.createObjectURL(file);
+    preview.onload = () => {
+      imageDetails.textContent =
+        `${file.name} · ${(file.size / (1024 * 1024)).toFixed(2)} MB`;
+    };
+    preview.onerror = () => {
+      previewBox.classList.remove("visible");
+      showStatus(
+        "Your browser could not preview this image format. Try a JPEG or PNG photo.",
+        "error"
+      );
+    };
 
-            paddleOCR = instance;
-            scanStatus.textContent = "OCR ready.";
-            return instance;
-          })();
-        }
+    preview.src = previewUrl;
+    previewBox.classList.add("visible");
 
-        try {
-          return await paddleOCRLoading;
-        } catch (error) {
-          paddleOCRLoading = null;
-          console.error("PaddleOCR initialisation failed:", error);
-          scanStatus.textContent =
-            "Could not load OCR models: " + error.message;
-          throw error;
-        }
-      }
+    showStatus(
+      "Your photo is ready to preview. Complete the security check to continue.",
+      "info"
+    );
+    updateButton();
+  });
 
-      function findGoldHexagon(image) {
-        const maxSide = 1400;
-        const scale = Math.min(
-          1,
-          maxSide / Math.max(image.naturalWidth, image.naturalHeight),
-        );
+  // Resize and convert images to JPEG to reduce upload size.
+  // Some browsers cannot decode HEIC/HEIF files; those get a clear message.
+  async function prepareImage(file) {
+    let bitmap;
 
-        const canvas = document.createElement("canvas");
-        canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
-        canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+    try {
+      if ("createImageBitmap" in window) {
+        bitmap = await createImageBitmap(file);
+      } else {
+        bitmap = await new Promise((resolve, reject) => {
+          const image = new Image();
+          const url = URL.createObjectURL(file);
 
-        const ctx = canvas.getContext("2d", {
-          willReadFrequently: true,
-        });
-
-        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-
-        const width = canvas.width;
-        const height = canvas.height;
-        const pixels = ctx.getImageData(0, 0, width, height).data;
-        const total = width * height;
-
-        const mask = new Uint8Array(total);
-        const visited = new Uint8Array(total);
-
-        for (let p = 0, i = 0; p < total; p++, i += 4) {
-          const r = pixels[i];
-          const g = pixels[i + 1];
-          const b = pixels[i + 2];
-
-          if (
-            r > 145 &&
-            g > 90 &&
-            b > 35 &&
-            b < 215 &&
-            r >= g - 5 &&
-            g - b > 15 &&
-            r - b > 25
-          ) {
-            mask[p] = 1;
-          }
-        }
-
-        const stack = new Int32Array(total);
-        const minimumArea = Math.max(25, total * 0.00015);
-
-        let best = null;
-        let bestScore = -Infinity;
-
-        for (let start = 0; start < total; start++) {
-          if (!mask[start] || visited[start]) continue;
-
-          let stackSize = 0;
-          stack[stackSize++] = start;
-          visited[start] = 1;
-
-          let area = 0;
-          let minX = width;
-          let minY = height;
-          let maxX = 0;
-          let maxY = 0;
-
-          while (stackSize > 0) {
-            const p = stack[--stackSize];
-            const x = p % width;
-            const y = Math.floor(p / width);
-
-            area++;
-            minX = Math.min(minX, x);
-            minY = Math.min(minY, y);
-            maxX = Math.max(maxX, x);
-            maxY = Math.max(maxY, y);
-
-            const neighbours = [p - 1, p + 1, p - width, p + width];
-
-            for (let n = 0; n < neighbours.length; n++) {
-              const q = neighbours[n];
-
-              if (q < 0 || q >= total) continue;
-              if (n === 0 && x === 0) continue;
-              if (n === 1 && x === width - 1) continue;
-
-              if (mask[q] && !visited[q]) {
-                visited[q] = 1;
-                stack[stackSize++] = q;
-              }
-            }
-          }
-
-          const boxWidth = maxX - minX + 1;
-          const boxHeight = maxY - minY + 1;
-          const aspect = boxWidth / boxHeight;
-
-          if (
-            area < minimumArea ||
-            boxWidth < Math.max(8, width * 0.006) ||
-            boxHeight < Math.max(8, height * 0.006) ||
-            boxWidth > width * 0.35 ||
-            boxHeight > height * 0.35 ||
-            aspect < 0.7 ||
-            aspect > 1.45
-          ) {
-            continue;
-          }
-
-          const score = area / (1 + Math.abs(Math.log(aspect)) * 2);
-
-          if (score > bestScore) {
-            bestScore = score;
-            best = {
-              x: minX,
-              y: minY,
-              width: boxWidth,
-              height: boxHeight,
-            };
-          }
-        }
-
-        if (!best) {
-          throw new Error(
-            "Could not find the gold centre hexagon. " +
-              "Please use a clear image showing the entire puzzle.",
-          );
-        }
-
-        return {
-          x: best.x / scale,
-          y: best.y / scale,
-          width: best.width / scale,
-          height: best.height / scale,
-        };
-      }
-
-      function estimateTileGeometry(image) {
-        const gold = findGoldHexagon(image);
-
-        return {
-          centerX: gold.x + gold.width / 2,
-          centerY: gold.y + gold.height / 2,
-          tileWidth: gold.width / 0.86,
-          tileHeight: gold.height / 0.86,
-        };
-      }
-
-      function getTileRectangles(image) {
-        const geometry = estimateTileGeometry(image);
-        const rectangles = {};
-
-        for (const name of TILE_NAMES) {
-          const offset = TILE_OFFSETS[name];
-          const cx = geometry.centerX + offset.x * geometry.tileWidth;
-          const cy = geometry.centerY + offset.y * geometry.tileHeight;
-
-          const cropWidth = geometry.tileWidth * 0.78;
-          const cropHeight = geometry.tileHeight * 0.78;
-          const x = cx - cropWidth / 2;
-          const y = cy - cropHeight / 2;
-
-          if (
-            x < 0 ||
-            y < 0 ||
-            x + cropWidth > image.naturalWidth ||
-            y + cropHeight > image.naturalHeight
-          ) {
-            throw new Error(
-              `The estimated ${name} tile falls outside the image. ` +
-                "Make sure the whole puzzle is visible.",
-            );
-          }
-
-          rectangles[name] = {
-            x,
-            y,
-            width: cropWidth,
-            height: cropHeight,
+          image.onload = () => {
+            URL.revokeObjectURL(url);
+            resolve(image);
           };
-        }
-
-        return rectangles;
-      }
-
-      function makeEnhancedTileCanvas(image, rect) {
-        const enlargement = 4;
-        const canvas = document.createElement("canvas");
-
-        canvas.width = Math.max(1, Math.round(rect.width * enlargement));
-        canvas.height = Math.max(1, Math.round(rect.height * enlargement));
-
-        const ctx = canvas.getContext("2d", {
-          willReadFrequently: true,
+          image.onerror = () => {
+            URL.revokeObjectURL(url);
+            reject(new Error("Unsupported image format."));
+          };
+          image.src = url;
         });
-
-        ctx.imageSmoothingEnabled = true;
-        ctx.imageSmoothingQuality = "high";
-
-        ctx.drawImage(
-          image,
-          rect.x,
-          rect.y,
-          rect.width,
-          rect.height,
-          0,
-          0,
-          canvas.width,
-          canvas.height,
-        );
-
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-
-        const pixels = imageData.data;
-
-        for (let i = 0; i < pixels.length; i += 4) {
-          const brightness =
-            0.299 * pixels[i] + 0.587 * pixels[i + 1] + 0.114 * pixels[i + 2];
-
-          const enhanced = Math.max(
-            0,
-            Math.min(255, (brightness - 128) * 1.35 + 128),
-          );
-
-          pixels[i] = enhanced;
-          pixels[i + 1] = enhanced;
-          pixels[i + 2] = enhanced;
-          pixels[i + 3] = 255;
-        }
-
-        ctx.putImageData(imageData, 0, 0);
-        return canvas;
       }
+    } catch (_) {
+      throw new Error(
+        "This browser could not read the photo format. On iPhone, try a JPEG photo or set Settings → Camera → Formats to Most Compatible."
+      );
+    }
 
-      function makeCropCanvas(image, crop) {
-        const canvas = document.createElement("canvas");
-        canvas.width = 480;
-        canvas.height = 480;
+    const width = bitmap.width || bitmap.naturalWidth;
+    const height = bitmap.height || bitmap.naturalHeight;
 
-        const ctx = canvas.getContext("2d", {
-          willReadFrequently: true,
-        });
+    if (!width || !height) {
+      if (bitmap.close) bitmap.close();
+      throw new Error("The image could not be read. Please choose another photo.");
+    }
 
-        ctx.fillStyle = "#FFFFFF";
-        ctx.fillRect(0, 0, 480, 480);
-        ctx.imageSmoothingEnabled = true;
-        ctx.imageSmoothingQuality = "high";
+    const scale = Math.min(1, MAX_DIMENSION / Math.max(width, height));
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.max(1, Math.round(width * scale));
+    canvas.height = Math.max(1, Math.round(height * scale));
 
-        const scale = Math.min(400 / crop.width, 400 / crop.height);
+    const context = canvas.getContext("2d", { alpha: false });
 
-        const width = crop.width * scale;
-        const height = crop.height * scale;
+    if (!context) {
+      if (bitmap.close) bitmap.close();
+      throw new Error("Your browser could not prepare the image.");
+    }
 
-        ctx.drawImage(
-          image,
-          crop.x,
-          crop.y,
-          crop.width,
-          crop.height,
-          (480 - width) / 2,
-          (480 - height) / 2,
-          width,
-          height,
-        );
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
 
-        return canvas;
-      }
+    if (bitmap.close) bitmap.close();
 
-      async function recogniseTile(ocr, image, rect) {
-        function normaliseLetter(text) {
-          const raw = (text || "").trim().toUpperCase();
+    let dataUrl = canvas.toDataURL("image/jpeg", 0.88);
 
-          if (raw === "1") return "I";
-          if (raw === "0") return "O";
+    if (dataUrl.length * 0.75 > MAX_IMAGE_BYTES) {
+      dataUrl = canvas.toDataURL("image/jpeg", 0.70);
+    }
 
-          const letters = raw.replace(/[^A-Z]/g, "");
-          return letters.length === 1 ? letters : "";
-        }
+    const base64 = dataUrl.split(",")[1] || "";
+    const approximateBytes = Math.floor(base64.length * 0.75);
 
-        async function runPass(canvas) {
-          // Important: all predictions use the serial queue.
-          const [result] = await queuedOCRPredict(ocr, canvas, {
-            textRecScoreThresh: 0.05,
-          });
+    if (approximateBytes > MAX_IMAGE_BYTES) {
+      throw new Error(
+        "The image is still too large after resizing. Please choose a smaller photo."
+      );
+    }
 
-          return (result.items || [])
-            .map((item) => ({
-              letter: normaliseLetter(item.text),
-              score: Number(item.score) || 0,
-            }))
-            .filter((item) => item.letter)
-            .sort((a, b) => b.score - a.score);
-        }
+    return dataUrl;
+  }
 
-        // Pass 1: original enhanced crop.
-        const first = await runPass(makeEnhancedTileCanvas(image, rect));
+  button.addEventListener("click", async () => {
+    if (!selectedFile) {
+      showStatus("Please choose a puzzle photo first.", "error");
+      return;
+    }
 
-        // Pass 2: tighter crop.
-        const insetX = rect.width * 0.1;
-        const insetY = rect.height * 0.1;
+    if (!turnstileToken) {
+      showStatus("Please complete the security check first.", "error");
+      return;
+    }
 
-        const tightX = Math.max(0, rect.x + insetX);
-        const tightY = Math.max(0, rect.y + insetY);
+    button.dataset.busy = "true";
+    button.textContent = "Reading letters…";
+    updateButton();
 
-        const tightRect = {
-          x: tightX,
-          y: tightY,
-          width: Math.min(rect.width - insetX * 2, image.naturalWidth - tightX),
-          height: Math.min(
-            rect.height - insetY * 2,
-            image.naturalHeight - tightY,
-          ),
-        };
+    showStatus("Preparing your photo and identifying the letters…", "info");
 
-        const tight = await runPass(makeCropCanvas(image, tightRect));
+    try {
+      const imageDataUrl = await prepareImage(selectedFile);
 
-        // Pass 3: slightly wider crop.
-        const padX = rect.width * 0.08;
-        const padY = rect.height * 0.08;
-        const wideX = Math.max(0, rect.x - padX);
-        const wideY = Math.max(0, rect.y - padY);
-
-        const wideRect = {
-          x: wideX,
-          y: wideY,
-          width: Math.min(rect.width + padX * 2, image.naturalWidth - wideX),
-          height: Math.min(rect.height + padY * 2, image.naturalHeight - wideY),
-        };
-
-        const wide = await runPass(makeCropCanvas(image, wideRect));
-
-        const all = [...first, ...tight, ...wide];
-
-        if (!all.length) {
-          return { letter: "", score: 0 };
-        }
-
-        // Each crop contributes at most one vote per candidate letter.
-        const votes = {};
-
-        for (const passResults of [first, tight, wide]) {
-          const passLetters = new Set(passResults.map((item) => item.letter));
-
-          for (const letter of passLetters) {
-            const item = passResults.find(
-              (candidate) => candidate.letter === letter,
-            );
-
-            if (!votes[letter]) {
-              votes[letter] = {
-                count: 0,
-                totalScore: 0,
-                bestScore: 0,
-              };
-            }
-
-            votes[letter].count++;
-            votes[letter].totalScore += item.score;
-            votes[letter].bestScore = Math.max(
-              votes[letter].bestScore,
-              item.score,
-            );
-          }
-        }
-
-        const [letter, stats] = Object.entries(votes).sort(
-          (a, b) =>
-            b[1].count - a[1].count ||
-            b[1].totalScore - a[1].totalScore ||
-            b[1].bestScore - a[1].bestScore,
-        )[0];
-
-        return {
-          letter,
-          score: stats.bestScore,
-        };
-      }
-
-      async function scanPhoto(file) {
-        if (!file) return;
-
-        if (!file.type.startsWith("image/")) {
-          scanStatus.textContent = "Please choose an image.";
-          return;
-        }
-
-        const objectUrl = URL.createObjectURL(file);
-
-        try {
-          photoPreview.src = objectUrl;
-          photoPreview.style.display = "block";
-
-          await photoPreview.decode();
-
-          scanStatus.textContent = "Finding the gold centre hexagon...";
-
-          const rectangles = getTileRectangles(photoPreview);
-          const ocr = await getPaddleOCR();
-          const recognisedTiles = {};
-
-          // Deliberately process tiles one by one.
-          for (let i = 0; i < TILE_NAMES.length; i++) {
-            const name = TILE_NAMES[i];
-
-            scanStatus.textContent = `Scanning ${name} tile (${i + 1} of 7)...`;
-
-            try {
-              recognisedTiles[name] = await recogniseTile(
-                ocr,
-                photoPreview,
-                rectangles[name],
-              );
-            } catch (error) {
-              console.warn(`OCR failed for ${name}:`, error);
-              recognisedTiles[name] = {
-                letter: "",
-                score: 0,
-              };
-            }
-          }
-
-          document.mainForm.centerLetter.value = recognisedTiles.center.letter;
-
-          const outerOrder = [
-            "top",
-            "upperLeft",
-            "upperRight",
-            "lowerLeft",
-            "lowerRight",
-            "bottom",
-          ];
-
-          document.mainForm.otherLetters.value = outerOrder
-            .map((name) => recognisedTiles[name].letter)
-            .join("");
-
-          const lines = TILE_NAMES.map((name) => {
-            const result = recognisedTiles[name];
-            const label = name === "center" ? "Centre (gold)" : name;
-
-            const confidence =
-              result.letter && result.score
-                ? ` (${Math.round(result.score * 100)}% confidence)`
-                : "";
-
-            return `${label}: ${result.letter || "not recognised"}${confidence}`;
-          });
-
-          const missing = TILE_NAMES.filter(
-            (name) => !recognisedTiles[name].letter,
-          );
-
-          if (missing.length === 0) {
-            scanStatus.textContent =
-              "Scanned all seven tile regions:\n" +
-              lines.join("\n") +
-              "\n\nPlease check the letters before searching.";
-          } else {
-            scanStatus.textContent =
-              `Recognised ${7 - missing.length} of 7 tile letters:\n` +
-              lines.join("\n") +
-              "\n\nCorrect any missing or incorrect letters manually.";
-          }
-        } catch (error) {
-          console.error("Spelling Bee scan failed:", error);
-
-          scanStatus.textContent =
-            "Scan failed: " +
-            (error.message || error) +
-            "\n\nTry an image showing the complete puzzle clearly.";
-        } finally {
-          URL.revokeObjectURL(objectUrl);
-        }
-      }
-
-      cameraInput.addEventListener("change", async () => {
-        const file = cameraInput.files && cameraInput.files[0];
-
-        if (file) {
-          await scanPhoto(file);
-        }
-
-        cameraInput.value = "";
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          imageDataUrl,
+          turnstileToken
+        })
       });
 
-      /*
-       * Preserve dictionary search.
-       */
-      window.findValidWords = async function (dictionaryIndex) {
-        const centerLetter = document.mainForm.centerLetter.value
-          .trim()
-          .toLowerCase();
+      let result;
 
-        const otherLetters = document.mainForm.otherLetters.value
-          .trim()
-          .toLowerCase()
-          .replace(/[^a-z]/g, "");
-
-        const allLetters = centerLetter + otherLetters;
-        const minLength = parseInt(document.mainForm.minLength.value, 10);
-
-        if (!/^[a-z]$/.test(centerLetter) || otherLetters.length !== 6) {
-          alert("Please enter one centre letter and six other letters.");
-          return;
-        }
-
-        try {
-          const [selectedDictionary, extraDictionary] = await Promise.all([
-            loadDictionaryFile(`dictionary${dictionaryIndex}.txt`),
-            loadDictionaryFile("dictionaryExtra.txt"),
-          ]);
-
-          const uniqueWords = [
-            ...new Set(
-              (selectedDictionary + "\n" + extraDictionary)
-                .split(/\r?\n/)
-                .map((word) => word.toLowerCase().trim())
-                .filter(Boolean),
-            ),
-          ];
-
-          const validWords = uniqueWords
-            .filter(
-              (word) =>
-                word.length >= minLength &&
-                word.includes(centerLetter) &&
-                [...word].every((letter) => allLetters.includes(letter)),
-            )
-            .sort();
-
-          let tableHtml = "<table>";
-
-          for (const word of validWords) {
-            const isPangram = [...new Set(allLetters)].every((letter) =>
-              word.includes(letter),
-            );
-
-            tableHtml += `<tr><td>${
-              isPangram ? "<b>" + word + "</b>" : word
-            }</td></tr>`;
-          }
-
-          tableHtml += "</table>";
-
-          document.getElementById("validWordsLabel").textContent =
-            " (" + validWords.length + ")";
-
-          document.getElementById("validWordsTable").innerHTML = tableHtml;
-        } catch (error) {
-          console.error(error);
-          alert(
-            "Could not load the dictionary files. " +
-              "Check the filenames and server.",
-          );
-        }
-      };
-
-      async function loadDictionaryFile(filename) {
-        const response = await fetch(filename);
-
-        if (!response.ok) {
-          throw new Error(
-            `Failed to load ${filename}: HTTP ${response.status}`,
-          );
-        }
-
-        return await response.text();
+      try {
+        result = await response.json();
+      } catch (_) {
+        throw new Error("The server response could not be read. Please try again.");
       }
-    </script>
-  </body>
+
+      if (!response.ok) {
+        const messages = {
+          400: "The request or image could not be processed. Try another photo.",
+          403: "The security check failed. Please complete it again.",
+          413: "The image is too large. Please choose a smaller photo.",
+          429: "The request limit has been reached. Please wait before trying again.",
+          503: "The letter-reading service is temporarily unavailable. Try again later."
+        };
+
+        throw new Error(
+          messages[response.status] ||
+          result.error ||
+          "Sorry, the request failed. Please try again."
+        );
+      }
+
+      const center = String(result.centerLetter || "").trim().toUpperCase();
+      const rawOthers = result.otherLetters;
+
+      const others = Array.isArray(rawOthers)
+        ? rawOthers.map(letter => String(letter).trim().toUpperCase())
+        : String(rawOthers || "").toUpperCase().match(/[A-Z]/g) || [];
+
+      const allLetters = [center, ...others];
+
+      const valid =
+        /^[A-Z]$/.test(center) &&
+        others.length === 6 &&
+        others.every(letter => /^[A-Z]$/.test(letter)) &&
+        new Set(allLetters).size === 7;
+
+      if (!valid) {
+        throw new Error(
+          "The result did not contain seven distinct letters. Try a clearer photo showing all seven hexagons."
+        );
+      }
+
+      centerField.value = center;
+      otherField.value = others.join(" ");
+
+      showStatus(
+        "Letters identified! Please double-check them against your puzzle.",
+        "success"
+      );
+
+    } catch (error) {
+      showStatus(
+        error && error.message
+          ? error.message
+          : "Something went wrong. Please try again.",
+        "error"
+      );
+
+    } finally {
+      button.dataset.busy = "false";
+      button.textContent = "Identify letters";
+
+      // Turnstile tokens are single-use, so reset after each attempt.
+      turnstileToken = "";
+
+      if (window.turnstile && turnstileWidgetId !== null) {
+        window.turnstile.reset(turnstileWidgetId);
+      }
+
+      updateButton();
+    }
+  });
+
+  centerField.addEventListener("input", () => {
+    centerField.value = centerField.value
+      .toUpperCase()
+      .replace(/[^A-Z]/g, "")
+      .slice(0, 1);
+  });
+
+  otherField.addEventListener("input", () => {
+    otherField.value = otherField.value
+      .toUpperCase()
+      .replace(/[^A-Z\s,]/g, "");
+  });
+})();
+</script>
+</body>
 </html>

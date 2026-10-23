@@ -1054,7 +1054,7 @@
             imageDetails.textContent = `${file.name} · ${(file.size / (1024 * 1024)).toFixed(2)} MB`;
 
             showStatus(
-              "Checking image quality and puzzle layout on your device...",
+              "Checking image quality on your device...",
               "info",
             );
 
@@ -1066,7 +1066,7 @@
               imageValidationPassed = true;
 
               showStatus(
-                "The image looks like a Spelling Bee puzzle. Complete the security check to identify the letters.",
+                "The image looks valid. Complete the security check to identify the letters.",
                 "success",
               );
             } catch (error) {
@@ -1078,7 +1078,7 @@
 
               showPersistentError(
                 error?.message ||
-                  "Could not verify the puzzle layout. Please choose another photo.",
+                  "Could not verify the image. Please choose another photo.",
               );
             } finally {
               updateButton();
@@ -1107,7 +1107,7 @@
           previewBox.classList.add("visible");
 
           showStatus(
-            "Your photo is ready to preview. Checking puzzle layout...",
+            "Your photo is ready to preview. Validating image...",
             "info",
           );
 

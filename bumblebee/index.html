@@ -501,140 +501,110 @@
             script.async = true;
 
             let settled = false;
+            let runtimeReadyResolve;
+
+            const runtimeReady = new Promise((resolveRuntime) => {
+              runtimeReadyResolve = resolveRuntime;
+            });
+
+            // IMPORTANT: Set this up before OpenCV's script is loaded.
+            const moduleObject = (window.Module = window.Module || {});
+            const previousRuntimeCallback = moduleObject.onRuntimeInitialized;
+
+            moduleObject.onRuntimeInitialized = function () {
+              try {
+                if (typeof previousRuntimeCallback === "function") {
+                  previousRuntimeCallback.apply(this, arguments);
+                }
+              } finally {
+                runtimeReadyResolve();
+              }
+            };
 
             const timeout = window.setTimeout(() => {
               fail(
                 new Error(
-                  "The image-checking tool took too long to load.  Please refresh and try again.",
+                  "OpenCV took too long to initialize. Please refresh and try again.",
                 ),
               );
             }, 30000);
 
             function cleanup() {
               window.clearTimeout(timeout);
+              script.onload = null;
+              script.onerror = null;
             }
 
             function fail(error) {
               if (settled) return;
+
               settled = true;
               cleanup();
               reject(error);
             }
 
-            function succeed(module) {
-              if (settled || !module || typeof module.Mat !== "function")
+            function succeed(cvModule) {
+              if (settled) return;
+
+              if (!cvModule || typeof cvModule.Mat !== "function") {
+                fail(
+                  new Error(
+                    "OpenCV's runtime initialized, but cv.Mat is unavailable.",
+                  ),
+                );
                 return;
+              }
 
               settled = true;
               cleanup();
-              window.cv = module;
 
-              // Prevent Promise resolution from treating OpenCV's thenable module
-              // as another promise while preserving its method context.
-              const safeCv = new Proxy(Object.create(null), {
-                get(_target, property) {
-                  if (property === "then") return undefined;
-                  return Reflect.get(module, property, module);
-                },
-
-                set(_target, property, value) {
-                  return Reflect.set(module, property, value, module);
-                },
-
-                has(_target, property) {
-                  return property !== "then" && Reflect.has(module, property);
-                },
-
-                ownKeys() {
-                  return Reflect.ownKeys(module).filter(
-                    (property) => property !== "then",
-                  );
-                },
-
-                getOwnPropertyDescriptor(_target, property) {
-                  if (property === "then") return undefined;
-
-                  const descriptor = Reflect.getOwnPropertyDescriptor(
-                    module,
-                    property,
-                  );
-
-                  if (!descriptor) return undefined;
-
-                  return {
-                    configurable: true,
-                    enumerable: descriptor.enumerable,
-                    writable: true,
-                    value: Reflect.get(module, property, module),
-                  };
-                },
-              });
-
-              resolve(safeCv);
+              // Wrap cv to avoid Promise resolution assimilating a thenable module.
+              resolve({ cv: cvModule });
             }
 
-            script.onload = () => {
-              const module = window.cv;
+            script.onload = async () => {
+              try {
+                const loadedCv = window.cv;
 
-              if (!module) {
-                fail(new Error("The image-checking tool could not load."));
-                return;
-              }
-
-              if (typeof module.then === "function") {
-                try {
-                  module.then((readyModule) => {
-                    const actual =
-                      readyModule && typeof readyModule.Mat === "function"
-                        ? readyModule
-                        : window.cv;
-
-                    if (actual && typeof actual.Mat === "function") {
-                      succeed(actual);
-                    } else {
-                      fail(
-                        new Error(
-                          "The image-checking tool could not initialize (actual.Mat is not a function).",
-                        ),
-                      );
-                    }
-                  }, fail);
-                } catch (error) {
-                  fail(error);
+                if (!loadedCv) {
+                  throw new Error(
+                    "The OpenCV script loaded without exposing cv.",
+                  );
                 }
 
-                return;
-              }
-
-              if (typeof module.Mat === "function") {
-                succeed(module);
-                return;
-              }
-
-              const previous = module.onRuntimeInitialized;
-
-              module.onRuntimeInitialized = () => {
-                try {
-                  if (typeof previous === "function") previous();
-                } catch (error) {
-                  fail(error);
+                // Some builds expose cv as a genuine Promise.
+                if (loadedCv instanceof Promise) {
+                  const readyCv = await loadedCv;
+                  succeed(readyCv);
                   return;
                 }
 
-                if (window.cv && typeof window.cv.Mat === "function") {
-                  succeed(window.cv);
-                } else {
-                  fail(
-                    new Error("The image-checking tool could not initialize (window.cv.Mat is not a function)."),
-                  );
+                // Other builds expose cv before its runtime is initialized.
+                if (typeof loadedCv.Mat === "function") {
+                  succeed(loadedCv);
+                  return;
                 }
-              };
+
+                // Wait for the callback registered before loading the script.
+                await runtimeReady;
+
+                if (settled) return;
+
+                // Re-read cv after initialization; do not await a thenable module.
+                succeed(window.cv);
+              } catch (error) {
+                fail(
+                  error instanceof Error
+                    ? error
+                    : new Error("OpenCV could not be initialized."),
+                );
+              }
             };
 
             script.onerror = () => {
               fail(
                 new Error(
-                  "The image-checking tool could not load. Check your connection and try again.",
+                  "OpenCV could not be downloaded. Check your connection and try again.",
                 ),
               );
             };
@@ -945,7 +915,7 @@
             bitmap.close();
             bitmap = null;
 
-            const cv = await loadOpenCV();
+            const { cv } = await loadOpenCV();
             const requiredFunctions = [
               "Mat",
               "imread",
@@ -1053,10 +1023,7 @@
 
             imageDetails.textContent = `${file.name} · ${(file.size / (1024 * 1024)).toFixed(2)} MB`;
 
-            showStatus(
-              "Checking image quality on your device...",
-              "info",
-            );
+            showStatus("Checking image quality on your device...", "info");
 
             try {
               await validatePuzzleImage(file);

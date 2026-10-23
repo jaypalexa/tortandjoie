@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f7f5ef" />
     <title>Tort and Joie - Bumblebee</title>
-    <meta
-      name="description"
-      content="Upload a photo of your Spelling Bee puzzle to identify its seven letters."
-    />
     <link
       rel="shortcut icon"
       type="image/png"
@@ -237,14 +233,13 @@
           />
         </p>
         <p class="intro">
-          Take a photo of your puzzle or choose one from your photo library. Check
-          the preview, then identify the seven letters.
+          Take a photo or choose one from your photo library. Check the preview, then continue.
         </p>
       -->
 
       <section class="panel">
-        <label for="puzzleImage">Choose a photo</label>
-        <input id="puzzleImage" type="file" accept="image/*" />
+        <label for="imageFileInput">Choose a photo</label>
+        <input id="imageFileInput" type="file" accept="image/*" />
 
         <p class="hint">
           On a phone, you can take a new photo or select an existing image.
@@ -253,7 +248,7 @@
         <!-- The preview appears as soon as an image is selected. -->
         <div id="previewBox" class="preview-box" aria-live="polite">
           <p class="preview-heading">Photo preview</p>
-          <img id="imagePreview" alt="Preview of your selected puzzle photo" />
+          <img id="imagePreview" alt="Preview of your selected photo" />
           <p id="imageDetails"></p>
         </div>
 
@@ -362,7 +357,7 @@
         // Grey ring: thickness is approximately one centre-hexagon size.
         const RING_INNER_RADIUS_FACTOR = 0.55;
 
-        const fileInput = document.getElementById("puzzleImage");
+        const fileInput = document.getElementById("imageFileInput");
         const previewBox = document.getElementById("previewBox");
         const preview = document.getElementById("imagePreview");
         const imageDetails = document.getElementById("imageDetails");
@@ -1169,13 +1164,13 @@
 
         button.addEventListener("click", async () => {
           if (!selectedFile) {
-            showStatus("Please choose a puzzle photo first.", "error");
+            showStatus("Please choose a photo first.", "error");
             return;
           }
 
           if (!imageValidationPassed) {
             showStatus(
-              "Please wait for the image and puzzle-layout checks to finish.",
+              "Please wait for the image validation checks to finish.",
               "error",
             );
             return;
@@ -1267,7 +1262,7 @@
             otherField.value = others.join(" ");
 
             showStatus(
-              "Letters identified! Please double-check them against your puzzle.",
+              "Letters identified! Please double-check them.",
               "success",
             );
           } catch (error) {
